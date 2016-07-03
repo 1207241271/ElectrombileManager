@@ -1,0 +1,22 @@
+PODS:
+  - AVOSCloud (3.3.5)
+  - AVOSCloudCrashReporting (3.3.5):
+    - AVOSCloud
+  - MJRefresh (3.1.9)
+  - MQTTKit (0.1.0)
+
+DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudCrashReporting
+  - MJRefresh
+  - MQTTKit
+
+SPEC CHECKSUMS:
+  AVOSCloud: 1fe170768bee7e05bc3ea86e38d5bddb105cb957
+  AVOSCloudCrashReporting: 7ad087db785a25d6ef03cb54c2c0b460eb32dabb
+  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  MQTTKit: a4e6b8aa92db1aeae917d2b773fd72a7749937c4
+
+PODFILE CHECKSUM: 18fcf47eeccd979fd8ab8d4155b7ab7e9315ce0c
+
+COCOAPODS: 1.0.0

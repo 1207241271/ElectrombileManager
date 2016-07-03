@@ -7,25 +7,65 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7663461D1D28F75C000ABB41 /* XCClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7663461C1D28F75C000ABB41 /* XCClientManager.m */; };
+		766346201D28F7A0000ABB41 /* loTDataPointClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7663461F1D28F7A0000ABB41 /* loTDataPointClass.m */; };
+		766346241D292EF5000ABB41 /* EBMDeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766346231D292EF5000ABB41 /* EBMDeviceInfoViewController.m */; };
+		766346291D293406000ABB41 /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 766346281D293406000ABB41 /* JZLocationConverter.m */; };
+		768919611D27A70E00E3D415 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919601D27A70E00E3D415 /* SystemConfiguration.framework */; };
+		768919631D27A71900E3D415 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919621D27A71900E3D415 /* MobileCoreServices.framework */; };
+		768919651D27A72500E3D415 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919641D27A72500E3D415 /* CoreTelephony.framework */; };
+		768919671D27A72C00E3D415 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919661D27A72C00E3D415 /* CoreLocation.framework */; };
+		768919691D27A73400E3D415 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919681D27A73400E3D415 /* libicucore.tbd */; };
+		7689196B1D27A73E00E3D415 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7689196A1D27A73E00E3D415 /* libc++.tbd */; };
+		7689196F1D27AD3600E3D415 /* EBMMainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7689196E1D27AD3600E3D415 /* EBMMainTableViewController.m */; };
+		768919741D27D03E00E3D415 /* EBMDeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768919731D27D03E00E3D415 /* EBMDeviceTableViewController.m */; };
+		768919771D27D09F00E3D415 /* EBMUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 768919761D27D09F00E3D415 /* EBMUserTableViewController.m */; };
+		7689197B1D28E02200E3D415 /* EBMUserDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7689197A1D28E02200E3D415 /* EBMUserDetailViewController.m */; };
+		807717F592D2361A76B17057 /* libPods-ElectrombileManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 999B1075EE1859BA0EC144DC /* libPods-ElectrombileManager.a */; };
 		96E4035C1D217DF300A82392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E4035B1D217DF300A82392 /* main.m */; };
-		96E4035F1D217DF300A82392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E4035E1D217DF300A82392 /* AppDelegate.m */; };
-		96E403621D217DF300A82392 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E403611D217DF300A82392 /* ViewController.m */; };
+		96E4035F1D217DF300A82392 /* EBMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E4035E1D217DF300A82392 /* EBMAppDelegate.m */; };
+		96E403621D217DF300A82392 /* EBMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E403611D217DF300A82392 /* EBMViewController.m */; };
 		96E403651D217DF300A82392 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E403631D217DF300A82392 /* Main.storyboard */; };
 		96E403671D217DF300A82392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96E403661D217DF300A82392 /* Assets.xcassets */; };
 		96E4036A1D217DF300A82392 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96E403681D217DF300A82392 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A8992A141A8E1A24899B86D /* Pods-ElectrombileManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectrombileManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ElectrombileManager/Pods-ElectrombileManager.release.xcconfig"; sourceTree = "<group>"; };
+		241EBC360570496FC0F234DD /* Pods-ElectrombileManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectrombileManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ElectrombileManager/Pods-ElectrombileManager.debug.xcconfig"; sourceTree = "<group>"; };
+		7663461B1D28F75C000ABB41 /* XCClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCClientManager.h; sourceTree = "<group>"; };
+		7663461C1D28F75C000ABB41 /* XCClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCClientManager.m; sourceTree = "<group>"; };
+		7663461E1D28F7A0000ABB41 /* loTDataPointClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loTDataPointClass.h; sourceTree = "<group>"; };
+		7663461F1D28F7A0000ABB41 /* loTDataPointClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loTDataPointClass.m; sourceTree = "<group>"; };
+		766346221D292EF5000ABB41 /* EBMDeviceInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMDeviceInfoViewController.h; sourceTree = "<group>"; };
+		766346231D292EF5000ABB41 /* EBMDeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMDeviceInfoViewController.m; sourceTree = "<group>"; };
+		766346271D293406000ABB41 /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
+		766346281D293406000ABB41 /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
+		768919601D27A70E00E3D415 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		768919621D27A71900E3D415 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		768919641D27A72500E3D415 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		768919661D27A72C00E3D415 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		768919681D27A73400E3D415 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		7689196A1D27A73E00E3D415 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		7689196D1D27AD3600E3D415 /* EBMMainTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMMainTableViewController.h; sourceTree = "<group>"; };
+		7689196E1D27AD3600E3D415 /* EBMMainTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMMainTableViewController.m; sourceTree = "<group>"; };
+		768919721D27D03E00E3D415 /* EBMDeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMDeviceTableViewController.h; sourceTree = "<group>"; };
+		768919731D27D03E00E3D415 /* EBMDeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMDeviceTableViewController.m; sourceTree = "<group>"; };
+		768919751D27D09F00E3D415 /* EBMUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMUserTableViewController.h; sourceTree = "<group>"; };
+		768919761D27D09F00E3D415 /* EBMUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMUserTableViewController.m; sourceTree = "<group>"; };
+		768919791D28E02200E3D415 /* EBMUserDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMUserDetailViewController.h; sourceTree = "<group>"; };
+		7689197A1D28E02200E3D415 /* EBMUserDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMUserDetailViewController.m; sourceTree = "<group>"; };
 		96E403571D217DF300A82392 /* ElectrombileManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElectrombileManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96E4035B1D217DF300A82392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		96E4035D1D217DF300A82392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		96E4035E1D217DF300A82392 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		96E403601D217DF300A82392 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		96E403611D217DF300A82392 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		96E4035D1D217DF300A82392 /* EBMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EBMAppDelegate.h; sourceTree = "<group>"; };
+		96E4035E1D217DF300A82392 /* EBMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EBMAppDelegate.m; sourceTree = "<group>"; };
+		96E403601D217DF300A82392 /* EBMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EBMViewController.h; sourceTree = "<group>"; };
+		96E403611D217DF300A82392 /* EBMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EBMViewController.m; sourceTree = "<group>"; };
 		96E403641D217DF300A82392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96E403661D217DF300A82392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96E403691D217DF300A82392 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96E4036B1D217DF300A82392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		999B1075EE1859BA0EC144DC /* libPods-ElectrombileManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectrombileManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +73,119 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7689196B1D27A73E00E3D415 /* libc++.tbd in Frameworks */,
+				768919691D27A73400E3D415 /* libicucore.tbd in Frameworks */,
+				768919671D27A72C00E3D415 /* CoreLocation.framework in Frameworks */,
+				768919651D27A72500E3D415 /* CoreTelephony.framework in Frameworks */,
+				768919631D27A71900E3D415 /* MobileCoreServices.framework in Frameworks */,
+				768919611D27A70E00E3D415 /* SystemConfiguration.framework in Frameworks */,
+				807717F592D2361A76B17057 /* libPods-ElectrombileManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51CCE176E4A5E0B37BAD5A1B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				241EBC360570496FC0F234DD /* Pods-ElectrombileManager.debug.xcconfig */,
+				0A8992A141A8E1A24899B86D /* Pods-ElectrombileManager.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B4DBE0B364E5F02E7362139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				999B1075EE1859BA0EC144DC /* libPods-ElectrombileManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7663461A1D28F745000ABB41 /* ClientManager */ = {
+			isa = PBXGroup;
+			children = (
+				7663461B1D28F75C000ABB41 /* XCClientManager.h */,
+				7663461C1D28F75C000ABB41 /* XCClientManager.m */,
+			);
+			name = ClientManager;
+			sourceTree = "<group>";
+		};
+		766346211D292EA1000ABB41 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				766346221D292EF5000ABB41 /* EBMDeviceInfoViewController.h */,
+				766346231D292EF5000ABB41 /* EBMDeviceInfoViewController.m */,
+			);
+			name = Device;
+			sourceTree = "<group>";
+		};
+		766346251D2933DA000ABB41 /* Point */ = {
+			isa = PBXGroup;
+			children = (
+				7663461E1D28F7A0000ABB41 /* loTDataPointClass.h */,
+				7663461F1D28F7A0000ABB41 /* loTDataPointClass.m */,
+			);
+			name = Point;
+			sourceTree = "<group>";
+		};
+		766346261D2933E9000ABB41 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				766346271D293406000ABB41 /* JZLocationConverter.h */,
+				766346281D293406000ABB41 /* JZLocationConverter.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		7689196C1D27AD2000E3D415 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7689196D1D27AD3600E3D415 /* EBMMainTableViewController.h */,
+				7689196E1D27AD3600E3D415 /* EBMMainTableViewController.m */,
+				768919711D27D00D00E3D415 /* DeviceTableViewController */,
+				768919701D27CFE900E3D415 /* UserTableViewController */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		768919701D27CFE900E3D415 /* UserTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				768919781D28DFCE00E3D415 /* UserDetail */,
+				768919751D27D09F00E3D415 /* EBMUserTableViewController.h */,
+				768919761D27D09F00E3D415 /* EBMUserTableViewController.m */,
+			);
+			name = UserTableViewController;
+			sourceTree = "<group>";
+		};
+		768919711D27D00D00E3D415 /* DeviceTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				766346211D292EA1000ABB41 /* Device */,
+				768919721D27D03E00E3D415 /* EBMDeviceTableViewController.h */,
+				768919731D27D03E00E3D415 /* EBMDeviceTableViewController.m */,
+			);
+			name = DeviceTableViewController;
+			sourceTree = "<group>";
+		};
+		768919781D28DFCE00E3D415 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				768919791D28E02200E3D415 /* EBMUserDetailViewController.h */,
+				7689197A1D28E02200E3D415 /* EBMUserDetailViewController.m */,
+			);
+			name = UserDetail;
+			sourceTree = "<group>";
+		};
 		96E4034E1D217DF300A82392 = {
 			isa = PBXGroup;
 			children = (
 				96E403591D217DF300A82392 /* ElectrombileManager */,
 				96E403581D217DF300A82392 /* Products */,
+				51CCE176E4A5E0B37BAD5A1B /* Pods */,
+				6B4DBE0B364E5F02E7362139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +200,14 @@
 		96E403591D217DF300A82392 /* ElectrombileManager */ = {
 			isa = PBXGroup;
 			children = (
-				96E4035D1D217DF300A82392 /* AppDelegate.h */,
-				96E4035E1D217DF300A82392 /* AppDelegate.m */,
-				96E403601D217DF300A82392 /* ViewController.h */,
-				96E403611D217DF300A82392 /* ViewController.m */,
+				766346261D2933E9000ABB41 /* Location */,
+				766346251D2933DA000ABB41 /* Point */,
+				7663461A1D28F745000ABB41 /* ClientManager */,
+				96E4035D1D217DF300A82392 /* EBMAppDelegate.h */,
+				96E4035E1D217DF300A82392 /* EBMAppDelegate.m */,
+				7689196C1D27AD2000E3D415 /* Main */,
+				96E403601D217DF300A82392 /* EBMViewController.h */,
+				96E403611D217DF300A82392 /* EBMViewController.m */,
 				96E403631D217DF300A82392 /* Main.storyboard */,
 				96E403661D217DF300A82392 /* Assets.xcassets */,
 				96E403681D217DF300A82392 /* LaunchScreen.storyboard */,
@@ -74,6 +220,12 @@
 		96E4035A1D217DF300A82392 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7689196A1D27A73E00E3D415 /* libc++.tbd */,
+				768919681D27A73400E3D415 /* libicucore.tbd */,
+				768919661D27A72C00E3D415 /* CoreLocation.framework */,
+				768919641D27A72500E3D415 /* CoreTelephony.framework */,
+				768919621D27A71900E3D415 /* MobileCoreServices.framework */,
+				768919601D27A70E00E3D415 /* SystemConfiguration.framework */,
 				96E4035B1D217DF300A82392 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -86,9 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96E4036E1D217DF300A82392 /* Build configuration list for PBXNativeTarget "ElectrombileManager" */;
 			buildPhases = (
+				601350D6383E45BD8A4E4EC9 /* 📦 Check Pods Manifest.lock */,
 				96E403531D217DF300A82392 /* Sources */,
 				96E403541D217DF300A82392 /* Frameworks */,
 				96E403551D217DF300A82392 /* Resources */,
+				BBFB09B495B63BE762534DA8 /* 📦 Embed Pods Frameworks */,
+				0E0302D027ACAF37A7BDE679 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +299,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0E0302D027ACAF37A7BDE679 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ElectrombileManager/Pods-ElectrombileManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		601350D6383E45BD8A4E4EC9 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BBFB09B495B63BE762534DA8 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ElectrombileManager/Pods-ElectrombileManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		96E403531D217DF300A82392 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96E403621D217DF300A82392 /* ViewController.m in Sources */,
-				96E4035F1D217DF300A82392 /* AppDelegate.m in Sources */,
+				96E403621D217DF300A82392 /* EBMViewController.m in Sources */,
+				7663461D1D28F75C000ABB41 /* XCClientManager.m in Sources */,
+				96E4035F1D217DF300A82392 /* EBMAppDelegate.m in Sources */,
+				7689197B1D28E02200E3D415 /* EBMUserDetailViewController.m in Sources */,
+				768919741D27D03E00E3D415 /* EBMDeviceTableViewController.m in Sources */,
+				766346241D292EF5000ABB41 /* EBMDeviceInfoViewController.m in Sources */,
+				766346201D28F7A0000ABB41 /* loTDataPointClass.m in Sources */,
+				766346291D293406000ABB41 /* JZLocationConverter.m in Sources */,
 				96E4035C1D217DF300A82392 /* main.m in Sources */,
+				7689196F1D27AD3600E3D415 /* EBMMainTableViewController.m in Sources */,
+				768919771D27D09F00E3D415 /* EBMUserTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +425,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -252,7 +463,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -261,6 +472,7 @@
 		};
 		96E4036F1D217DF300A82392 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 241EBC360570496FC0F234DD /* Pods-ElectrombileManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElectrombileManager/Info.plist;
@@ -272,6 +484,7 @@
 		};
 		96E403701D217DF300A82392 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A8992A141A8E1A24899B86D /* Pods-ElectrombileManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElectrombileManager/Info.plist;
@@ -300,6 +513,7 @@
 				96E403701D217DF300A82392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
