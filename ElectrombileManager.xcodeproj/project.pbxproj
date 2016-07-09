@@ -11,6 +11,7 @@
 		766346201D28F7A0000ABB41 /* loTDataPointClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 7663461F1D28F7A0000ABB41 /* loTDataPointClass.m */; };
 		766346241D292EF5000ABB41 /* EBMDeviceInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766346231D292EF5000ABB41 /* EBMDeviceInfoViewController.m */; };
 		766346291D293406000ABB41 /* JZLocationConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 766346281D293406000ABB41 /* JZLocationConverter.m */; };
+		766780DE1D30E2D900539BBC /* EBMMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 766780DD1D30E2D900539BBC /* EBMMapViewController.m */; };
 		768919611D27A70E00E3D415 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919601D27A70E00E3D415 /* SystemConfiguration.framework */; };
 		768919631D27A71900E3D415 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919621D27A71900E3D415 /* MobileCoreServices.framework */; };
 		768919651D27A72500E3D415 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768919641D27A72500E3D415 /* CoreTelephony.framework */; };
@@ -41,6 +42,8 @@
 		766346231D292EF5000ABB41 /* EBMDeviceInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMDeviceInfoViewController.m; sourceTree = "<group>"; };
 		766346271D293406000ABB41 /* JZLocationConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JZLocationConverter.h; sourceTree = "<group>"; };
 		766346281D293406000ABB41 /* JZLocationConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JZLocationConverter.m; sourceTree = "<group>"; };
+		766780DC1D30E2D900539BBC /* EBMMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBMMapViewController.h; sourceTree = "<group>"; };
+		766780DD1D30E2D900539BBC /* EBMMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBMMapViewController.m; sourceTree = "<group>"; };
 		768919601D27A70E00E3D415 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		768919621D27A71900E3D415 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		768919641D27A72500E3D415 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -117,6 +120,7 @@
 			children = (
 				766346221D292EF5000ABB41 /* EBMDeviceInfoViewController.h */,
 				766346231D292EF5000ABB41 /* EBMDeviceInfoViewController.m */,
+				766780DB1D30E2C200539BBC /* Map */,
 			);
 			name = Device;
 			sourceTree = "<group>";
@@ -137,6 +141,15 @@
 				766346281D293406000ABB41 /* JZLocationConverter.m */,
 			);
 			name = Location;
+			sourceTree = "<group>";
+		};
+		766780DB1D30E2C200539BBC /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				766780DC1D30E2D900539BBC /* EBMMapViewController.h */,
+				766780DD1D30E2D900539BBC /* EBMMapViewController.m */,
+			);
+			name = Map;
 			sourceTree = "<group>";
 		};
 		7689196C1D27AD2000E3D415 /* Main */ = {
@@ -260,11 +273,13 @@
 		96E4034F1D217DF300A82392 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Wuhan Huake Xunce Co., Ltd.";
 				TargetAttributes = {
 					96E403561D217DF300A82392 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = X5CBHKQ885;
+						DevelopmentTeamName = "Wuhan Huakexunce Technology Co., Ltd.";
 					};
 				};
 			};
@@ -362,6 +377,7 @@
 				766346291D293406000ABB41 /* JZLocationConverter.m in Sources */,
 				96E4035C1D217DF300A82392 /* main.m in Sources */,
 				7689196F1D27AD3600E3D415 /* EBMMainTableViewController.m in Sources */,
+				766780DE1D30E2D900539BBC /* EBMMapViewController.m in Sources */,
 				768919771D27D09F00E3D415 /* EBMUserTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,7 +441,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -463,7 +479,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -476,6 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElectrombileManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xunce.ElectrombileManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -488,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ElectrombileManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xunce.ElectrombileManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";

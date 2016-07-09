@@ -4,4 +4,5 @@ target "ElectrombileManager" do
 	pod "AVOSCloudCrashReporting"
 	pod "MJRefresh"
 	pod 'MQTTKit'
+	pod 'BaiduMapKit'
 end

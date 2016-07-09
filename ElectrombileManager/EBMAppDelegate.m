@@ -26,7 +26,11 @@ static NSString *const ClientKey = @"yovqy5zy16og43zwew8i6qmtkp2y6r9b18zerha0fqi
     [AVOSCloudCrashReporting enable];
     [AVOSCloud setApplicationId:APPId clientKey:ClientKey];
     [AVAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    
+    _mapManager = [[BMKMapManager alloc] init];
+    BOOL ret = [_mapManager start:@"kMZFpf8w9TjO7dK2iKq19vM3rXOzHrvy" generalDelegate:nil];
+    if (!ret) {
+        NSLog(@"manager start failed!");
+    }
     
     // Override point for customization after application launch.
     return YES;

@@ -7,20 +7,24 @@
 //
 
 #import "EBMDeviceInfoViewController.h"
+#import "EBMUserDetailViewController.h"
+#import "EBMMapViewController.h"
+
+#import <AVOSCloud.h>
 #import <MapKit/MapKit.h>
 #import "loTDataPointClass.h"
 #import "XCClientManager.h"
 
-@interface EBMDeviceInfoViewController ()<MKMapViewDelegate>
+@interface EBMDeviceInfoViewController ()<MKMapViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (strong, nonatomic) XCClientManager *client;
 @property (strong, nonatomic) IBOutlet UILabel *labSwitch;
 @property (strong, nonatomic) IBOutlet UILabel *labAutoSwitch;
 @property (strong, nonatomic) IBOutlet UILabel *labAutoPeriod;
 @property (strong, nonatomic) IBOutlet UILabel *labBattery;
 @property (strong, nonatomic) IBOutlet UILabel *labPlace;
-
-
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray    *userArray;
+@property (strong, nonatomic) NSMutableArray    *userObjectIdArray;
 
 
 @end
@@ -30,7 +34,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _client =  [[XCClientManager alloc]initWithIMEI:_IMEI];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    _client =  [XCClientManager sharedClient];
+    [_client subscrible:_IMEI];
+    [self getUserObjectList];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getStatus:) name:NOTIF_AQB_STATUS_INFO object:nil];
     
 }
@@ -58,6 +67,8 @@
             
             loTDataPointClass *point = [[loTDataPointClass alloc] initWithLatitude:[result[@"lat"] doubleValue] longitude:[result[@"lng"] doubleValue]];
             [self setPlaceFromPoint:[point getCoordinate2D] toLabel:_labPlace];
+        }else if (code==APP_ERR_OFFLINE){
+            [_labSwitch setText:@"设备离线"];
         }
     });
 }
@@ -75,7 +86,6 @@
     CLGeocoder  *geocoder=[[CLGeocoder alloc] init];
     CLLocation  *currentLocation=[[CLLocation alloc]initWithLatitude:point.latitude longitude:point.longitude];
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        
         if (placemarks.count>0)
             dispatch_async(dispatch_get_main_queue(), ^{
                 CLPlacemark *place=[placemarks objectAtIndex:0];
@@ -88,10 +98,76 @@
                     subThoroughfare=@"";
                 }
                 NSString *placeName=[NSString stringWithFormat:@"%@%@%@%@",place.locality,place.subLocality,thoroughfare,subThoroughfare];
-//                _latestPoint.placeName=placeName;
                 [label setText:placeName];
-                
             });
     }];
 }
+-(void)getUserObjectList{
+    __weak  __typeof(self)  weakself = self;
+    AVQuery *query = [AVQuery queryWithClassName:@"Bindings"];
+    [query whereKey:@"IMEI" equalTo:_IMEI];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error == nil) {
+            for (AVObject *object in objects) {
+//                [weakself.userObjectIdArray addObject:object[@"user"]];
+                AVUser *user = object[@"user"];
+                NSLog(@"%@",[user objectForKey:@"username"]);
+                [weakself.userObjectIdArray addObject:user.objectId];
+                [weakself getUserNameWithUserObjectId:user.objectId];
+            }
+        }
+    }];
+    
+}
+
+-(void)getUserNameWithUserObjectId:(NSString *)objectId{
+    __weak  __typeof(self)  weakself = self;
+    AVQuery *query = [AVQuery queryWithClassName:@"_User"];
+    [query whereKey:@"objectId" equalTo:objectId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (error == nil) {
+            for (AVObject *object in objects) {
+                [weakself.userArray addObject:object[@"username"]];
+            }
+            if (weakself.userArray.count == weakself.userObjectIdArray.count) {
+                [weakself.tableView reloadData];
+            }
+        }
+    }];
+}
+
+#pragma mark    -   UITableViewDataSource
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return _userArray.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *const  cellIdentifier = @"cellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    }
+    cell.textLabel.text = _userArray[indexPath.row];
+    return cell;
+}
+- (IBAction)enterMap:(id)sender {
+    EBMMapViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"EBMMapViewController"];
+    viewController.client = _client;
+    [self.navigationController pushViewController:viewController animated:YES];
+}
+
+#pragma mark    -   UITableViewDelegate
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    EBMUserDetailViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"EBMUserDetailViewController"];
+    viewController.userObjectId = _userObjectIdArray[indexPath.row];
+    [self.navigationController pushViewController:viewController animated:YES];
+    
+}
+
+
+
 @end

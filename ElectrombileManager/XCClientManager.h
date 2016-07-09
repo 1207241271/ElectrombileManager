@@ -97,7 +97,8 @@ struct gpsData{
 
 @property (nonatomic,strong)    NSString    *IMEI;
 
-- (instancetype)initWithIMEI:(NSString *)IMEI;
++(instancetype)sharedClient;
+- (void) subscrible:(NSString *)IMEI;
 - (void) getGeoFence;
 - (void) getLatandLong;
 - (void) setCenterCode;

@@ -40,40 +40,57 @@ NSString *const NOTIF_AQB_STATUS_INFO               =@"NOTIF_AQB_STATUS_INFO";
 static XCClientManager *instance = nil;
 
 @interface XCClientManager()
-
+@property (strong, nonatomic)NSString       *oldIMEI;
 @end
 
 @implementation XCClientManager {
     MQTTClient *client;
 }
 
++ (instancetype)sharedClient{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc] init];
+    });
+    return instance;
+}
 
-- (instancetype)initWithIMEI:(NSString *)IMEI {
-    _IMEI = IMEI;
+- (instancetype)init{
+    if (self = [super init]) {
+        //NSString *clientID = AppDelegate.username;
         NSString *clientID = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-    
+
         client = [[MQTTClient alloc] initWithClientId:clientID];
         
         __block XCClientManager *Manager = self;
         [client setMessageHandler:^(MQTTMessage *message) {
             [Manager didReceiveData:message.payload formTopic:message.topic];
         }];
-    
-    [client connectToHost:MQTT_HOST
-        completionHandler:^(MQTTConnectionReturnCode code) {
-            if (code == ConnectionAccepted) {
-                // when the client is connected, subscribe to the topic to receive message.
-                [client subscribe:[NSString stringWithFormat:@"dev2app/%@/cmd",IMEI] withCompletionHandler:^(NSArray *grantedQos) {
-                    [self getStatus];
-                }];
-                [client subscribe:[NSString stringWithFormat:@"dev2app/%@/gps",IMEI] withCompletionHandler:^(NSArray *grantedQos) {
-                    [self getLatandLong];
-                }];
-                NSLog(@"订阅cmd gps 433 话题");
-            }
-        }];
-
+        
+        // connect the MQTT client
+        [client connectToHost:MQTT_HOST
+            completionHandler:^(MQTTConnectionReturnCode code) {
+                if (code == ConnectionAccepted) {
+                    // when the client is connected, subscribe to the topic to receive message.
+                }
+            }];
+        
+    }
     return self;
+}
+
+-(void)subscrible:(NSString *)IMEI{
+    [client unsubscribe:[NSString stringWithFormat:@"dev2app/%@/cmd",_oldIMEI]  withCompletionHandler:nil];
+    [client unsubscribe:[NSString stringWithFormat:@"dev2app/%@/gps", _oldIMEI] withCompletionHandler:nil];
+    [client unsubscribe:[NSString stringWithFormat:@"dev2app/%@/433", _oldIMEI] withCompletionHandler:nil];
+
+    _IMEI = IMEI;
+    [client subscribe:[NSString stringWithFormat:@"dev2app/%@/cmd", IMEI] withCompletionHandler:^(NSArray *grantedQos) {
+        [self getStatus];
+    }];
+    [client subscribe:[NSString stringWithFormat:@"dev2app/%@/gps", IMEI] withCompletionHandler:^(NSArray *grantedQos) {
+        [self getLatandLong];
+    }];
 }
 
 - (NSString *)logSet:(NSSet *)dic {
@@ -183,8 +200,8 @@ static XCClientManager *instance = nil;
     if (data == nil) {
         NSLog(@"接收到的数据为空");
     }
-    NSString *dataString = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"接收到的数据是：%@",dataString);
+    NSDictionary *dic=[ NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
+    NSLog(@"接收到的数据是：%@",dic.description);
     unsigned short startSig;
     startSig = ntohs(startSig);
     if ([topic isEqualToString:[NSString stringWithFormat:@"dev2app/%@/gps",_IMEI]]) {
@@ -236,12 +253,10 @@ static XCClientManager *instance = nil;
     if ([topic isEqualToString:[NSString stringWithFormat:@"dev2app/%@/cmd",_IMEI]]) {
         short cmd;
         short result;
-        NSLog(@"top:%@",topic);
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&err];
         cmd = [[dic objectForKey:@"cmd"] shortValue];
         result = [[dic objectForKey:@"code"] shortValue];
         NSNumber *number = [[NSNumber alloc]initWithShort:result];
-        NSLog(@"接收中心收到的result是：%@",number);
         switch (cmd) {
             case CMD_FENCE_ON:
                 [[NSNotificationCenter defaultCenter] postNotificationName:NOTIF_RCVD_SETSOS_ACK object:dic];
@@ -305,13 +320,12 @@ static XCClientManager *instance = nil;
     if (stringData) {
         [dic setObject:[NSNumber numberWithInt:[stringData intValue]] forKey:@"period"];
     }
-    NSLog(@"DIC %@",dic);
     jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&err];
     NSLog(@"%@ ",[[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding]);
     //cmd to json
     if(err != nil&&dic)
     {
-        NSLog(@"error是 %@",err);
+//        NSLog(@"error是 %@",err);
     }else{
         [self publishData:jsonData];
     }
@@ -322,6 +336,7 @@ static XCClientManager *instance = nil;
 - (void)publishData:(NSData*)payload {
     [client publishData:payload toTopic:[NSString stringWithFormat:@"app2dev/%@/cmd", _IMEI] withQos:AtMostOnce retain:NO completionHandler:nil];
     NSLog(@"send__________%@__________",_IMEI);
+
 }
 
 @end

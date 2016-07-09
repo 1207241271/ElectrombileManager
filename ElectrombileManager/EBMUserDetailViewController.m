@@ -7,6 +7,7 @@
 //
 
 #import "EBMUserDetailViewController.h"
+#import "EBMDeviceInfoViewController.h"
 #import <AVOSCloud.h>
 
 @interface EBMUserDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -48,7 +49,9 @@
 
 #pragma mark    -   UITableViewDelegate
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    EBMDeviceInfoViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"EBMDeviceInfoViewController"];
+    viewController.IMEI = _deviceArray[indexPath.row];
+    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

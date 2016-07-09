@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <BaiduMapKit/BaiduMapAPI_Base/BMKMapManager.h>
 @interface EBMAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) BMKMapManager     *mapManager;
 
 @end
 

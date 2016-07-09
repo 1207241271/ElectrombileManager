@@ -1,976 +1,3907 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		0A826B08486ABB621A01FC09FC3307D0 /* send_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 463F122405FF076C8D144CCCED2DE850 /* send_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0C6C78C2FEC153CE1B94E5C1A494B8DB /* read_handle_client.c in Sources */ = {isa = PBXBuildFile; fileRef = 68176F8B91AE3BEFF6788445C5B46649 /* read_handle_client.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0CD59E4A07679254FCD5F69EDFCDC7B6 /* logging_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DC5E6A91729B8D250618CEA8CFD3148 /* logging_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0D82DC9B2E3B57C4421C10AEA49C6D75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		0F36AAF946576A69BCF65416D5AB1FFE /* net_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = EB718E31E2186F5CE309312849ED8BBC /* net_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		124D206D1CA6C238834B2F2685225D86 /* memory_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = D889ADE9A20931A35FAE4036515E5DFE /* memory_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		12BE33D676B92DE06A2AE7B4A323E7C8 /* net_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D17EA68E25EB06EA279ABDC41FEFB68 /* net_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		132010EF9B5680FF1CE24C01545D568C /* mqtt3_protocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13F5D2A9F13E64294DBBEAC4E9B2E451 /* mqtt3_protocol.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1750E8156D634B9DCFCBDF366430F326 /* MJRefreshBackFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = B8756B3D3444D2A0215E4E217D70340E /* MJRefreshBackFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D6CB9214CA0040D336A3009D4761EEA /* will_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CCB6438A544F1F7F978F861CACBD7 /* will_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1E88082E67EECA1458FA24BBF7677908 /* MJRefreshComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 68A4B6D06C074A147C59573DD17E234B /* MJRefreshComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1F48696AD698115D898EC7CCD60D075A /* MJRefreshBackStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB348D276CFD2208AF17207DBC8C1EA /* MJRefreshBackStateFooter.m */; };
-		2427E2F0CA20B2924D366EA986934663 /* MJRefreshAutoStateFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E1269E836805905BDFFF659CD6F0FC /* MJRefreshAutoStateFooter.m */; };
-		2D7FBA552B3CED667D78641BD3DEF96C /* MJRefreshAutoFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = B4C411CC53B4D0453D3D91379DD19878 /* MJRefreshAutoFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E7B9CD345D22DF637EF482ED0A43FE4 /* thread_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = D48ACC35C2F95A2489B8FCAFAF87CF4B /* thread_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		3AB6BCE6926858E6B5CE3A9568670B60 /* memory_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = F326264EAD78722B61C8E80FDE68292A /* memory_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3FCBC8DED7E48831872465294DDB9B6E /* time_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = 577496498479C87554FA99F3F5BAB9C8 /* time_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		401E263227EC555D61B8BBB94ED09D73 /* MJRefreshFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FFA25D5EE04421E2C639843AC19BB42 /* MJRefreshFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		44529459406814AB948DF5BFEEA0A227 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = F01BE2C12C7771F42D05AA1A8B3BF287 /* UIView+MJExtension.m */; };
-		4548D482088C76C3191E06CDFD55A8E3 /* MJRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B58333CF6B96C10C7E38E3073AB1136 /* MJRefreshNormalHeader.m */; };
-		45C257901E8F645FBF3015102728F0AC /* MQTTKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D1E6AC90774237AD3EE6817AB7A1445A /* MQTTKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		467ADC9DF6A1E6193FE860E7DF3E8D07 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 03108B8E52ED897495AD700B6A351CED /* UIScrollView+MJRefresh.m */; };
-		468C3B68DEF2C90B587786775E4B1AFA /* mosquitto.h in Headers */ = {isa = PBXBuildFile; fileRef = DF06FF0E5DBD443D2787B910F49C405E /* mosquitto.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		499211EAF9B4ACA6D9DC215454184F4D /* MJRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1706BA571799D28D688B831969C1D /* MJRefreshHeader.m */; };
-		49C79F1E6A28D8F1137F991B67E4FFC6 /* dummypthread.h in Headers */ = {isa = PBXBuildFile; fileRef = 426459D73F74958DED93A53D778C5EE3 /* dummypthread.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		4A55E2CB58A23956EF1822F5A6DF5F2C /* MJRefreshNormalHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AE8B7AE954EBB0ED978C328330E2297 /* MJRefreshNormalHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4C359B72D6BDE27D946D1B4D5A22DE00 /* UIScrollView+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = BB213D7D1A8400D25351A699724ECFEC /* UIScrollView+MJRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F367DCDFE766D2A4DB80B51A41AACA0 /* MJRefreshConst.m in Sources */ = {isa = PBXBuildFile; fileRef = F36FFCF56B5451764DF619D88A833B97 /* MJRefreshConst.m */; };
-		5711B9C0974381FA41135A9460E7DF75 /* mosquitto_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 0244A6C6E6BC5AD234EF9F5B590700F6 /* mosquitto_internal.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		59F6E6FE2D22A9ACB59760DA962E319E /* read_handle.h in Headers */ = {isa = PBXBuildFile; fileRef = A31517818997718CAE25CDD1993973F3 /* read_handle.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5A18A32422C5C66F04A1803B4E06737A /* MJRefreshBackNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 947B31EB8AAA304E574D8B4A2F77A496 /* MJRefreshBackNormalFooter.m */; };
-		5C849F6751AD884C01F2B63E7F766170 /* send_client_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 2DCAA7E6EE5B0C6506E45BD0F2EE0BDA /* send_client_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		609F826CF03C38AD57FD4755AE2C19B0 /* messages_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 01117B6234132A0D5B6A7CDAAFF2F578 /* messages_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		60B872A80D2C7EC0A342F16970BF22BB /* MJRefreshAutoStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8402F0076F690B2AEF6C3669A14F9B52 /* MJRefreshAutoStateFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6401732D299AF2E66A86932AC8BB931D /* MJRefreshConst.h in Headers */ = {isa = PBXBuildFile; fileRef = 12BFD0A1544008B50825548BAC4FA286 /* MJRefreshConst.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69E1CE5225A654934B2A36CCEECD0F82 /* MJRefreshBackNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BDB2281F662D4E27C0BF63CC63704F3 /* MJRefreshBackNormalFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6ACE435B71030CD770DECAA65380285F /* MJRefreshGifHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = B156DFC5BFDAE7C5D4F2BB448EBBC329 /* MJRefreshGifHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6D40913F14E30C5027EDB1E8E5267456 /* MJRefreshAutoGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 563199726AD079E1B2C6F68BA37FBA28 /* MJRefreshAutoGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E9813A3A92FBA6F262C2C9EA2D60D14 /* UIScrollView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B56BAA5D8246B7CC059B30A038418BD0 /* UIScrollView+MJExtension.m */; };
-		702A36A2FB387BED332E93FE561203CF /* messages_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = A8AC66EFD063EE376F1904990C543F8E /* messages_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		729824F7571ED25599AD2A5E1E831189 /* MJRefreshBackGifFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = B476E231B652FE655DDF05566ED5C2B0 /* MJRefreshBackGifFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		75036CE65B8811D4A81FA11D7B969D30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		777A861D7A0ED7A46ED02C5611EDC9FD /* NSBundle+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 069CC6A13A41789E9A07ABB23E38F48E /* NSBundle+MJRefresh.m */; };
-		78E642FD20DDC06D7DB26D73AD4B74C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		7BB5FA5A44FBC13830AE9E7731A38D7F /* UIScrollView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = D2B191450DCD78C4ABA612AE100049A0 /* UIScrollView+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		820AE72EE18049DB0D39950065ABA727 /* MJRefreshAutoNormalFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = 877FDF0E2FF7E43CCAC2C7535922DAB4 /* MJRefreshAutoNormalFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		832385F31AACCFABD48F783C577C8785 /* NSBundle+MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = EC325BF1563DD0642A4265BAA8EE5D6E /* NSBundle+MJRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8355E9060CF4352ED0E21569A6FED32F /* MJRefreshBackStateFooter.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF520A8B044E744FC45490689D0EB4D /* MJRefreshBackStateFooter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		881AB1EA374C9358F2A83F1D835D1B35 /* MJRefreshHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = FCC1B57AF82162C163B90EDE477D0BC0 /* MJRefreshHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A9118E83980D38CDCA9C5476CDBEC66 /* MJRefreshStateHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BCE9EBCA3E6F17E9B54D84D8C40E63 /* MJRefreshStateHeader.m */; };
-		8AFD2BCCC8AB03B5E750D194C0193480 /* time_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = E3FA0BC14598F45864BB2754A58E1D2E /* time_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		8E34C2C41BB9A646C73B40CC13C3A3A5 /* send_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F28EFC0A2B14B7B33C4AAE79CECF27 /* send_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9347B960A275D7EEF8F79F348578B45D /* MJRefreshStateHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DBFEA5303B0373AF8F45D422E6B8621 /* MJRefreshStateHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2F6E9757ACC5A5FFACE3FE77F525BBB /* MJRefreshAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18492FF3E49BFDDD0D8362F18FFE1228 /* MJRefreshAutoNormalFooter.m */; };
-		A82BB748CD97C5F0B8128EC4B54F5CB6 /* util_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = 69CB55CAE03E949242E1904FCEE6F7C7 /* util_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B10A64BAF7708212BEE77303B46759A0 /* UIView+MJExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = AA16EAB1481F24E0AC516DF71987405C /* UIView+MJExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7B6154D69B450647A1787A95ECAD0F2 /* MJRefreshAutoGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = EBA675F489F8012CF24D9339D8EF9BB2 /* MJRefreshAutoGifFooter.m */; };
-		BA4BB0AAC5D763942B85DD3856FCC790 /* MQTTKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 902022EFF89EA9F670BF850516736F86 /* MQTTKit-dummy.m */; };
-		BF2F903B2423040CD1EE653A7EA71BEF /* mosquitto.c in Sources */ = {isa = PBXBuildFile; fileRef = FAAD5327FFC5728E3F2AC091F13575D9 /* mosquitto.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C0266DA702333927677C77CC3FCB8390 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = C0202D74539BF498397EE52CDD47784F /* MJRefreshAutoFooter.m */; };
-		C10291D821E77E019EC760D33F1DAB2B /* MJRefresh.h in Headers */ = {isa = PBXBuildFile; fileRef = 033F84A0FD380CEB896683E33B239CFA /* MJRefresh.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6931B427F567C8B2FA563BC6F0B31D1 /* read_handle_shared.c in Sources */ = {isa = PBXBuildFile; fileRef = DA46CBDEFD4151E65BE083C38924EDE4 /* read_handle_shared.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		C70624D2FCE51ACAEE1499BE2F2CB268 /* tls_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = 042D3243F05FD9B64C0E38298D59B9F9 /* tls_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		CE70903D30721393D18219789D9D1829 /* tls_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = EB0B94B04D3AE06A0252660F5F133AD4 /* tls_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CEFDC58C7241F86D92DEF8EDFCE7DF99 /* MJRefresh-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0233F3458E0BBA0AAC79976A0DFBDF63 /* MJRefresh-dummy.m */; };
-		CF2B54BBC95C6F8B8C60D75E2DCC865A /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CDF14446867D3B79B7DD24B7361BF44 /* config.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DD90519B83D4EDC272FA46904BA2D9F8 /* read_handle.c in Sources */ = {isa = PBXBuildFile; fileRef = D84E6FECD0D18F0883E9C5F8C6E9836A /* read_handle.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E18AFF24E93352E04326B85AFDA366DA /* Pods-ElectrombileManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 35C0216630B14C9F8DD0F22A3E44B657 /* Pods-ElectrombileManager-dummy.m */; };
-		E4ED52BE75F1191E119E354A91E1CD29 /* will_mosq.h in Headers */ = {isa = PBXBuildFile; fileRef = BCE6005ECC261A03103954314A5F57C5 /* will_mosq.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E7A8DDD289D3BFB8950D29CBF67C7132 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F621EF7C28F3D74E62994E18EB4C1C6 /* MJRefreshBackFooter.m */; };
-		E954B9D3A283FB30A945CE8823E102DD /* MJRefreshFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = ED7A38D5706387C6DCD1D5782E12D522 /* MJRefreshFooter.m */; };
-		F01687C8E9A3E4F8A528BE97DE7BDB80 /* MJRefreshBackGifFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F948E4385581339F359DE8BC05463F33 /* MJRefreshBackGifFooter.m */; };
-		F07282C44C6E921780365CD5A0A798A0 /* logging_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = D04E592694BD06267AD737E4C9D8695C /* logging_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F3AC7C93C770A6F7918EA23972C1762A /* MJRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF30ECEC1FF30816498CA526DB28C97 /* MJRefreshGifHeader.m */; };
-		F52763D22F95CF0A6F8491822F37BF5D /* MJRefreshComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = A24281FCD5ED73B1DEBEEC8B700832A6 /* MJRefreshComponent.m */; };
-		F92D9215C6F6FAEB63F7FBF3ACEAAB8D /* util_mosq.c in Sources */ = {isa = PBXBuildFile; fileRef = 03C5216657EED178659461CC23965F16 /* util_mosq.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		FC257C7C2E81FFE7B228DEB698755BC6 /* MQTTKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FA9B84ADCEBDB46E413333085BA75E /* MQTTKit.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7903E4FEB21258D8EFC0626B55C720DB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 70BC44266C6FFE30D2C57129458E070B;
-			remoteInfo = MJRefresh;
-		};
-		EC5E91D0C92704CC7F1F28D867F23864 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 74CD2F578138157E0B27CCEE08C069EF;
-			remoteInfo = MQTTKit;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		01117B6234132A0D5B6A7CDAAFF2F578 /* messages_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = messages_mosq.c; path = libmosquitto/messages_mosq.c; sourceTree = "<group>"; };
-		0233F3458E0BBA0AAC79976A0DFBDF63 /* MJRefresh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MJRefresh-dummy.m"; sourceTree = "<group>"; };
-		0244A6C6E6BC5AD234EF9F5B590700F6 /* mosquitto_internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mosquitto_internal.h; path = libmosquitto/mosquitto_internal.h; sourceTree = "<group>"; };
-		03108B8E52ED897495AD700B6A351CED /* UIScrollView+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJRefresh.m"; path = "MJRefresh/UIScrollView+MJRefresh.m"; sourceTree = "<group>"; };
-		033F84A0FD380CEB896683E33B239CFA /* MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefresh.h; path = MJRefresh/MJRefresh.h; sourceTree = "<group>"; };
-		03C5216657EED178659461CC23965F16 /* util_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = util_mosq.c; path = libmosquitto/util_mosq.c; sourceTree = "<group>"; };
-		042D3243F05FD9B64C0E38298D59B9F9 /* tls_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tls_mosq.h; path = libmosquitto/tls_mosq.h; sourceTree = "<group>"; };
-		069CC6A13A41789E9A07ABB23E38F48E /* NSBundle+MJRefresh.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+MJRefresh.m"; path = "MJRefresh/NSBundle+MJRefresh.m"; sourceTree = "<group>"; };
-		095F2D93092DF0B2AC17B4A468733B50 /* AVAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAvailability.h; sourceTree = "<group>"; };
-		0BDB2281F662D4E27C0BF63CC63704F3 /* MJRefreshBackNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackNormalFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h; sourceTree = "<group>"; };
-		0ECA727FC6B827B67619282B8FA100C1 /* AVConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVConstants.h; sourceTree = "<group>"; };
-		10C4AD2D1BD90818EB31A5579DCC763F /* AVMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVMessage.h; sourceTree = "<group>"; };
-		12BFD0A1544008B50825548BAC4FA286 /* MJRefreshConst.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshConst.h; path = MJRefresh/MJRefreshConst.h; sourceTree = "<group>"; };
-		13F5D2A9F13E64294DBBEAC4E9B2E451 /* mqtt3_protocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mqtt3_protocol.h; path = libmosquitto/mqtt3_protocol.h; sourceTree = "<group>"; };
-		18492FF3E49BFDDD0D8362F18FFE1228 /* MJRefreshAutoNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoNormalFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m; sourceTree = "<group>"; };
-		1BAB9AD638376BEAD04DD1394B196B9A /* AVObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVObject+Subclass.h"; sourceTree = "<group>"; };
-		1CDF14446867D3B79B7DD24B7361BF44 /* config.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = config.h; path = libmosquitto/config.h; sourceTree = "<group>"; };
-		1EC3F0FB788C30A540A5FAD5F35498D1 /* Pods-ElectrombileManager-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElectrombileManager-frameworks.sh"; sourceTree = "<group>"; };
-		22697A1A338A7CDD1B10529050880BAE /* libAVOSCloud.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libAVOSCloud.a; sourceTree = "<group>"; };
-		236FA023EEEF259BEE17B8411E2B877B /* Pods-ElectrombileManager-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ElectrombileManager-acknowledgements.plist"; sourceTree = "<group>"; };
-		23D1706BA571799D28D688B831969C1D /* MJRefreshHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshHeader.m; path = MJRefresh/Base/MJRefreshHeader.m; sourceTree = "<group>"; };
-		25D84DF14D4D03E4C02EC708DB6B20F1 /* AVAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAnalytics.h; sourceTree = "<group>"; };
-		28123F2CB5E684BD45D22BFAF49744EA /* libMJRefresh.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMJRefresh.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		29D4549D76CFB5E316AEDB2B0F995356 /* AVStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVStatus.h; sourceTree = "<group>"; };
-		29EE94C475E4A097EF6003AE5A1B6662 /* libPods-ElectrombileManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ElectrombileManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DCAA7E6EE5B0C6506E45BD0F2EE0BDA /* send_client_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = send_client_mosq.c; path = libmosquitto/send_client_mosq.c; sourceTree = "<group>"; };
-		2F6F2BC1B31A76EA81FDE8C33BFB5582 /* AVSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSession.h; sourceTree = "<group>"; };
-		35C0216630B14C9F8DD0F22A3E44B657 /* Pods-ElectrombileManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ElectrombileManager-dummy.m"; sourceTree = "<group>"; };
-		3CF5F93DFCFBDFE3BCADC84CC8CD79F7 /* AVFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVFile.h; sourceTree = "<group>"; };
-		426459D73F74958DED93A53D778C5EE3 /* dummypthread.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = dummypthread.h; path = libmosquitto/dummypthread.h; sourceTree = "<group>"; };
-		4549CE5957FC3D032C0C52293F99D9C0 /* MJRefresh.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MJRefresh.xcconfig; sourceTree = "<group>"; };
-		463F122405FF076C8D144CCCED2DE850 /* send_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = send_mosq.c; path = libmosquitto/send_mosq.c; sourceTree = "<group>"; };
-		475621CB27A4066323768D5CB5185A77 /* AVLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVLogger.h; sourceTree = "<group>"; };
-		4A1C9C8C2CAAF5C63CF0F65D732D64B8 /* AVPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVPush.h; sourceTree = "<group>"; };
-		4AE8B7AE954EBB0ED978C328330E2297 /* MJRefreshNormalHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshNormalHeader.h; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.h; sourceTree = "<group>"; };
-		4B2B33BBEDD845433A046E782FAB34BB /* AVInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVInstallation.h; sourceTree = "<group>"; };
-		505871967F13AC4A4FAEDAFDE95E5627 /* AVRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVRole.h; sourceTree = "<group>"; };
-		563199726AD079E1B2C6F68BA37FBA28 /* MJRefreshAutoGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoGifFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h; sourceTree = "<group>"; };
-		56B7CDA15DCFDD87D62E16431512AA38 /* AVOSCloudCrashReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVOSCloudCrashReporting.h; sourceTree = "<group>"; };
-		577496498479C87554FA99F3F5BAB9C8 /* time_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = time_mosq.h; path = libmosquitto/time_mosq.h; sourceTree = "<group>"; };
-		58F9A37816F7F8DF1EDBEBE9D5988755 /* AVGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVGroup.h; sourceTree = "<group>"; };
-		5DBFEA5303B0373AF8F45D422E6B8621 /* MJRefreshStateHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshStateHeader.h; path = MJRefresh/Custom/Header/MJRefreshStateHeader.h; sourceTree = "<group>"; };
-		5FFA25D5EE04421E2C639843AC19BB42 /* MJRefreshFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshFooter.h; path = MJRefresh/Base/MJRefreshFooter.h; sourceTree = "<group>"; };
-		63BCE9EBCA3E6F17E9B54D84D8C40E63 /* MJRefreshStateHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshStateHeader.m; path = MJRefresh/Custom/Header/MJRefreshStateHeader.m; sourceTree = "<group>"; };
-		68176F8B91AE3BEFF6788445C5B46649 /* read_handle_client.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = read_handle_client.c; path = libmosquitto/read_handle_client.c; sourceTree = "<group>"; };
-		68A4B6D06C074A147C59573DD17E234B /* MJRefreshComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshComponent.h; path = MJRefresh/Base/MJRefreshComponent.h; sourceTree = "<group>"; };
-		69CB55CAE03E949242E1904FCEE6F7C7 /* util_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = util_mosq.h; path = libmosquitto/util_mosq.h; sourceTree = "<group>"; };
-		6D6CCB6438A544F1F7F978F861CACBD7 /* will_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = will_mosq.c; path = libmosquitto/will_mosq.c; sourceTree = "<group>"; };
-		6DC5E6A91729B8D250618CEA8CFD3148 /* logging_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = logging_mosq.h; path = libmosquitto/logging_mosq.h; sourceTree = "<group>"; };
-		780943F3C1A48266C923B73A016AB571 /* AVOSCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVOSCloud.h; sourceTree = "<group>"; };
-		7BF30ECEC1FF30816498CA526DB28C97 /* MJRefreshGifHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshGifHeader.m; path = MJRefresh/Custom/Header/MJRefreshGifHeader.m; sourceTree = "<group>"; };
-		7D17EA68E25EB06EA279ABDC41FEFB68 /* net_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = net_mosq.h; path = libmosquitto/net_mosq.h; sourceTree = "<group>"; };
-		82FA9B84ADCEBDB46E413333085BA75E /* MQTTKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MQTTKit.m; path = MQTTKit/MQTTKit.m; sourceTree = "<group>"; };
-		8402F0076F690B2AEF6C3669A14F9B52 /* MJRefreshAutoStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoStateFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h; sourceTree = "<group>"; };
-		8418E35A753A8F1046FA8B568BB47D0D /* AVSaveOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSaveOption.h; sourceTree = "<group>"; };
-		877FDF0E2FF7E43CCAC2C7535922DAB4 /* MJRefreshAutoNormalFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoNormalFooter.h; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h; sourceTree = "<group>"; };
-		8AB348D276CFD2208AF17207DBC8C1EA /* MJRefreshBackStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackStateFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m; sourceTree = "<group>"; };
-		8B58333CF6B96C10C7E38E3073AB1136 /* MJRefreshNormalHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshNormalHeader.m; path = MJRefresh/Custom/Header/MJRefreshNormalHeader.m; sourceTree = "<group>"; };
-		8F586AB39C55FA02F9AE3121A3468F4D /* AVAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAnonymousUtils.h; sourceTree = "<group>"; };
-		902022EFF89EA9F670BF850516736F86 /* MQTTKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MQTTKit-dummy.m"; sourceTree = "<group>"; };
-		925317E5A03963A8A9037FD728EDA7FC /* AVSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSubclassing.h; sourceTree = "<group>"; };
-		92FDF3B4FC8251045B9EBBB2FFD5E1D9 /* MQTTKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MQTTKit.xcconfig; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		947B31EB8AAA304E574D8B4A2F77A496 /* MJRefreshBackNormalFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackNormalFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m; sourceTree = "<group>"; };
-		97C602502739A5038C8DAEF0BD6269B1 /* AVCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVCloud.h; sourceTree = "<group>"; };
-		9E85F5622F3B5215D6F63CE07213901F /* libAVOSCloudCrashReporting.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libAVOSCloudCrashReporting.a; sourceTree = "<group>"; };
-		9F621EF7C28F3D74E62994E18EB4C1C6 /* MJRefreshBackFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackFooter.m; path = MJRefresh/Base/MJRefreshBackFooter.m; sourceTree = "<group>"; };
-		A24281FCD5ED73B1DEBEEC8B700832A6 /* MJRefreshComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshComponent.m; path = MJRefresh/Base/MJRefreshComponent.m; sourceTree = "<group>"; };
-		A31517818997718CAE25CDD1993973F3 /* read_handle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = read_handle.h; path = libmosquitto/read_handle.h; sourceTree = "<group>"; };
-		A31D1ACB50B8D66A0652A9BFD711ABE3 /* AVQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVQuery.h; sourceTree = "<group>"; };
-		A5EE3BE9830747621B1CC554FFCEE08A /* Pods-ElectrombileManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElectrombileManager.release.xcconfig"; sourceTree = "<group>"; };
-		A8AC66EFD063EE376F1904990C543F8E /* messages_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = messages_mosq.h; path = libmosquitto/messages_mosq.h; sourceTree = "<group>"; };
-		AA16EAB1481F24E0AC516DF71987405C /* UIView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+MJExtension.h"; path = "MJRefresh/UIView+MJExtension.h"; sourceTree = "<group>"; };
-		B156DFC5BFDAE7C5D4F2BB448EBBC329 /* MJRefreshGifHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshGifHeader.h; path = MJRefresh/Custom/Header/MJRefreshGifHeader.h; sourceTree = "<group>"; };
-		B1A6353989C0CB6A92F3B9E7CB1F0FBA /* MJRefresh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MJRefresh-prefix.pch"; sourceTree = "<group>"; };
-		B476E231B652FE655DDF05566ED5C2B0 /* MJRefreshBackGifFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackGifFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h; sourceTree = "<group>"; };
-		B4C411CC53B4D0453D3D91379DD19878 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshAutoFooter.h; path = MJRefresh/Base/MJRefreshAutoFooter.h; sourceTree = "<group>"; };
-		B56BAA5D8246B7CC059B30A038418BD0 /* UIScrollView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+MJExtension.m"; path = "MJRefresh/UIScrollView+MJExtension.m"; sourceTree = "<group>"; };
-		B5EA2583361147242FF70A6DA9A32CAC /* AVRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVRelation.h; sourceTree = "<group>"; };
-		B8756B3D3444D2A0215E4E217D70340E /* MJRefreshBackFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackFooter.h; path = MJRefresh/Base/MJRefreshBackFooter.h; sourceTree = "<group>"; };
-		BB213D7D1A8400D25351A699724ECFEC /* UIScrollView+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJRefresh.h"; path = "MJRefresh/UIScrollView+MJRefresh.h"; sourceTree = "<group>"; };
-		BB466CA48D460DB389F0BA5C5E1B8B08 /* AVACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVACL.h; sourceTree = "<group>"; };
-		BCE6005ECC261A03103954314A5F57C5 /* will_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = will_mosq.h; path = libmosquitto/will_mosq.h; sourceTree = "<group>"; };
-		C0202D74539BF498397EE52CDD47784F /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoFooter.m; path = MJRefresh/Base/MJRefreshAutoFooter.m; sourceTree = "<group>"; };
-		C03C39BC12FFB26F7D6AC0243512DEC2 /* Pods-ElectrombileManager-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ElectrombileManager-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C1E1269E836805905BDFFF659CD6F0FC /* MJRefreshAutoStateFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoStateFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m; sourceTree = "<group>"; };
-		C4F28EFC0A2B14B7B33C4AAE79CECF27 /* send_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = send_mosq.h; path = libmosquitto/send_mosq.h; sourceTree = "<group>"; };
-		CB0BDA86C328803623FA7C7921B62FFA /* AVSearchQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSearchQuery.h; sourceTree = "<group>"; };
-		CE285321C0AC85CCA568311683815F78 /* AVObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVObject.h; sourceTree = "<group>"; };
-		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D04E592694BD06267AD737E4C9D8695C /* logging_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = logging_mosq.c; path = libmosquitto/logging_mosq.c; sourceTree = "<group>"; };
-		D1E6AC90774237AD3EE6817AB7A1445A /* MQTTKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MQTTKit.h; path = MQTTKit/MQTTKit.h; sourceTree = "<group>"; };
-		D25B1445778C6EDF7E67163DAE42F2D0 /* AVFileQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVFileQuery.h; sourceTree = "<group>"; };
-		D2B191450DCD78C4ABA612AE100049A0 /* UIScrollView+MJExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+MJExtension.h"; path = "MJRefresh/UIScrollView+MJExtension.h"; sourceTree = "<group>"; };
-		D48ACC35C2F95A2489B8FCAFAF87CF4B /* thread_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = thread_mosq.c; path = libmosquitto/thread_mosq.c; sourceTree = "<group>"; };
-		D74D2164C9688928587E153457051EE8 /* MQTTKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MQTTKit-prefix.pch"; sourceTree = "<group>"; };
-		D84E6FECD0D18F0883E9C5F8C6E9836A /* read_handle.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = read_handle.c; path = libmosquitto/read_handle.c; sourceTree = "<group>"; };
-		D889ADE9A20931A35FAE4036515E5DFE /* memory_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = memory_mosq.c; path = libmosquitto/memory_mosq.c; sourceTree = "<group>"; };
-		D9BC3E9C95050A96EDBA8E2FDF63663D /* AVUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVUser.h; sourceTree = "<group>"; };
-		DA0CFDDE216EB50BC7F774F4DF8F5D9D /* Pods-ElectrombileManager-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ElectrombileManager-resources.sh"; sourceTree = "<group>"; };
-		DA46CBDEFD4151E65BE083C38924EDE4 /* read_handle_shared.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = read_handle_shared.c; path = libmosquitto/read_handle_shared.c; sourceTree = "<group>"; };
-		DC629B0175BF8039E42A947FDA9152A4 /* AVSearchSortBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSearchSortBuilder.h; sourceTree = "<group>"; };
-		DF06FF0E5DBD443D2787B910F49C405E /* mosquitto.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mosquitto.h; path = libmosquitto/mosquitto.h; sourceTree = "<group>"; };
-		E3FA0BC14598F45864BB2754A58E1D2E /* time_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = time_mosq.c; path = libmosquitto/time_mosq.c; sourceTree = "<group>"; };
-		E9D2CED04DDF0D48B7F2002A4D2CD518 /* libMQTTKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMQTTKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EADFA61796E72B3A4210CC15744309CA /* AVSignature.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSignature.h; sourceTree = "<group>"; };
-		EB0B94B04D3AE06A0252660F5F133AD4 /* tls_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = tls_mosq.c; path = libmosquitto/tls_mosq.c; sourceTree = "<group>"; };
-		EB718E31E2186F5CE309312849ED8BBC /* net_mosq.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = net_mosq.c; path = libmosquitto/net_mosq.c; sourceTree = "<group>"; };
-		EBA675F489F8012CF24D9339D8EF9BB2 /* MJRefreshAutoGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshAutoGifFooter.m; path = MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m; sourceTree = "<group>"; };
-		EC325BF1563DD0642A4265BAA8EE5D6E /* NSBundle+MJRefresh.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+MJRefresh.h"; path = "MJRefresh/NSBundle+MJRefresh.h"; sourceTree = "<group>"; };
-		EC5EA5727385FB457F54DD43F618B652 /* AVGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVGeoPoint.h; sourceTree = "<group>"; };
-		ED7A38D5706387C6DCD1D5782E12D522 /* MJRefreshFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshFooter.m; path = MJRefresh/Base/MJRefreshFooter.m; sourceTree = "<group>"; };
-		EF74C6E4F3E83E9196271C646687F4B6 /* MJRefresh.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = MJRefresh.bundle; path = MJRefresh/MJRefresh.bundle; sourceTree = "<group>"; };
-		F01BE2C12C7771F42D05AA1A8B3BF287 /* UIView+MJExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+MJExtension.m"; path = "MJRefresh/UIView+MJExtension.m"; sourceTree = "<group>"; };
-		F06CACBC453F6F5A8C41534BC169F5CA /* Pods-ElectrombileManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ElectrombileManager.debug.xcconfig"; sourceTree = "<group>"; };
-		F12B54B7F3811B586BC933F045D1A4BD /* AVHistoryMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVHistoryMessage.h; sourceTree = "<group>"; };
-		F326264EAD78722B61C8E80FDE68292A /* memory_mosq.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = memory_mosq.h; path = libmosquitto/memory_mosq.h; sourceTree = "<group>"; };
-		F36FFCF56B5451764DF619D88A833B97 /* MJRefreshConst.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshConst.m; path = MJRefresh/MJRefreshConst.m; sourceTree = "<group>"; };
-		F81B599636624918BA11CB618AA9E33C /* AVCloudQueryResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVCloudQueryResult.h; sourceTree = "<group>"; };
-		F948E4385581339F359DE8BC05463F33 /* MJRefreshBackGifFooter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MJRefreshBackGifFooter.m; path = MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m; sourceTree = "<group>"; };
-		FAAD5327FFC5728E3F2AC091F13575D9 /* mosquitto.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = mosquitto.c; path = libmosquitto/mosquitto.c; sourceTree = "<group>"; };
-		FBDB653960308D7FA1D409A340543A26 /* AVHistoryMessageQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVHistoryMessageQuery.h; sourceTree = "<group>"; };
-		FCC1B57AF82162C163B90EDE477D0BC0 /* MJRefreshHeader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshHeader.h; path = MJRefresh/Base/MJRefreshHeader.h; sourceTree = "<group>"; };
-		FEF520A8B044E744FC45490689D0EB4D /* MJRefreshBackStateFooter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MJRefreshBackStateFooter.h; path = MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		716E21940E48DEC8AE1AFE6355C66A9A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75036CE65B8811D4A81FA11D7B969D30 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		91247678E3E2D23B0BF2C3EF48002167 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78E642FD20DDC06D7DB26D73AD4B74C9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9278550544296A135AD73F057D0C80F8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0D82DC9B2E3B57C4421C10AEA49C6D75 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		04225DAE71E6AE8B1DACF4EACE72309F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				92FDF3B4FC8251045B9EBBB2FFD5E1D9 /* MQTTKit.xcconfig */,
-				902022EFF89EA9F670BF850516736F86 /* MQTTKit-dummy.m */,
-				D74D2164C9688928587E153457051EE8 /* MQTTKit-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MQTTKit";
-			sourceTree = "<group>";
-		};
-		1CEF47FFA3C0D6F18D7C71BF697E24F0 /* Pods-ElectrombileManager */ = {
-			isa = PBXGroup;
-			children = (
-				C03C39BC12FFB26F7D6AC0243512DEC2 /* Pods-ElectrombileManager-acknowledgements.markdown */,
-				236FA023EEEF259BEE17B8411E2B877B /* Pods-ElectrombileManager-acknowledgements.plist */,
-				35C0216630B14C9F8DD0F22A3E44B657 /* Pods-ElectrombileManager-dummy.m */,
-				1EC3F0FB788C30A540A5FAD5F35498D1 /* Pods-ElectrombileManager-frameworks.sh */,
-				DA0CFDDE216EB50BC7F774F4DF8F5D9D /* Pods-ElectrombileManager-resources.sh */,
-				F06CACBC453F6F5A8C41534BC169F5CA /* Pods-ElectrombileManager.debug.xcconfig */,
-				A5EE3BE9830747621B1CC554FFCEE08A /* Pods-ElectrombileManager.release.xcconfig */,
-			);
-			name = "Pods-ElectrombileManager";
-			path = "Target Support Files/Pods-ElectrombileManager";
-			sourceTree = "<group>";
-		};
-		2DCAD76ADA3BC4204C566A6BC26C3279 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9E85F5622F3B5215D6F63CE07213901F /* libAVOSCloudCrashReporting.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		315D23F3B0A45E26640DC41007CD5CE2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				28123F2CB5E684BD45D22BFAF49744EA /* libMJRefresh.a */,
-				E9D2CED04DDF0D48B7F2002A4D2CD518 /* libMQTTKit.a */,
-				29EE94C475E4A097EF6003AE5A1B6662 /* libPods-ElectrombileManager.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		59CB0179FCDC790AED2F6937D8C2A17A /* AVOSCloud */ = {
-			isa = PBXGroup;
-			children = (
-				BB466CA48D460DB389F0BA5C5E1B8B08 /* AVACL.h */,
-				25D84DF14D4D03E4C02EC708DB6B20F1 /* AVAnalytics.h */,
-				8F586AB39C55FA02F9AE3121A3468F4D /* AVAnonymousUtils.h */,
-				095F2D93092DF0B2AC17B4A468733B50 /* AVAvailability.h */,
-				97C602502739A5038C8DAEF0BD6269B1 /* AVCloud.h */,
-				F81B599636624918BA11CB618AA9E33C /* AVCloudQueryResult.h */,
-				0ECA727FC6B827B67619282B8FA100C1 /* AVConstants.h */,
-				3CF5F93DFCFBDFE3BCADC84CC8CD79F7 /* AVFile.h */,
-				D25B1445778C6EDF7E67163DAE42F2D0 /* AVFileQuery.h */,
-				EC5EA5727385FB457F54DD43F618B652 /* AVGeoPoint.h */,
-				58F9A37816F7F8DF1EDBEBE9D5988755 /* AVGroup.h */,
-				F12B54B7F3811B586BC933F045D1A4BD /* AVHistoryMessage.h */,
-				FBDB653960308D7FA1D409A340543A26 /* AVHistoryMessageQuery.h */,
-				4B2B33BBEDD845433A046E782FAB34BB /* AVInstallation.h */,
-				475621CB27A4066323768D5CB5185A77 /* AVLogger.h */,
-				10C4AD2D1BD90818EB31A5579DCC763F /* AVMessage.h */,
-				CE285321C0AC85CCA568311683815F78 /* AVObject.h */,
-				1BAB9AD638376BEAD04DD1394B196B9A /* AVObject+Subclass.h */,
-				780943F3C1A48266C923B73A016AB571 /* AVOSCloud.h */,
-				4A1C9C8C2CAAF5C63CF0F65D732D64B8 /* AVPush.h */,
-				A31D1ACB50B8D66A0652A9BFD711ABE3 /* AVQuery.h */,
-				B5EA2583361147242FF70A6DA9A32CAC /* AVRelation.h */,
-				505871967F13AC4A4FAEDAFDE95E5627 /* AVRole.h */,
-				8418E35A753A8F1046FA8B568BB47D0D /* AVSaveOption.h */,
-				CB0BDA86C328803623FA7C7921B62FFA /* AVSearchQuery.h */,
-				DC629B0175BF8039E42A947FDA9152A4 /* AVSearchSortBuilder.h */,
-				2F6F2BC1B31A76EA81FDE8C33BFB5582 /* AVSession.h */,
-				EADFA61796E72B3A4210CC15744309CA /* AVSignature.h */,
-				29D4549D76CFB5E316AEDB2B0F995356 /* AVStatus.h */,
-				925317E5A03963A8A9037FD728EDA7FC /* AVSubclassing.h */,
-				D9BC3E9C95050A96EDBA8E2FDF63663D /* AVUser.h */,
-				7D5464C2706B89444821E3691341587E /* Frameworks */,
-			);
-			path = AVOSCloud;
-			sourceTree = "<group>";
-		};
-		6FA771B9310C9DED2CC08324EC56448F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				EF74C6E4F3E83E9196271C646687F4B6 /* MJRefresh.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		7D5464C2706B89444821E3691341587E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				22697A1A338A7CDD1B10529050880BAE /* libAVOSCloud.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7DB346D0F39D3F0E887471402A8071AB = {
-			isa = PBXGroup;
-			children = (
-				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				E32507BDB03E09AE539AE860E7294DD4 /* Pods */,
-				315D23F3B0A45E26640DC41007CD5CE2 /* Products */,
-				F5EA198FFD6B21876A1A332E954447EA /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		96DB51F449B0C5D0839231365B3078B9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4549CE5957FC3D032C0C52293F99D9C0 /* MJRefresh.xcconfig */,
-				0233F3458E0BBA0AAC79976A0DFBDF63 /* MJRefresh-dummy.m */,
-				B1A6353989C0CB6A92F3B9E7CB1F0FBA /* MJRefresh-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/MJRefresh";
-			sourceTree = "<group>";
-		};
-		B96A0E2CFA25C85CD2E70FB88D7294CD /* MQTTKit */ = {
-			isa = PBXGroup;
-			children = (
-				1CDF14446867D3B79B7DD24B7361BF44 /* config.h */,
-				426459D73F74958DED93A53D778C5EE3 /* dummypthread.h */,
-				D04E592694BD06267AD737E4C9D8695C /* logging_mosq.c */,
-				6DC5E6A91729B8D250618CEA8CFD3148 /* logging_mosq.h */,
-				D889ADE9A20931A35FAE4036515E5DFE /* memory_mosq.c */,
-				F326264EAD78722B61C8E80FDE68292A /* memory_mosq.h */,
-				01117B6234132A0D5B6A7CDAAFF2F578 /* messages_mosq.c */,
-				A8AC66EFD063EE376F1904990C543F8E /* messages_mosq.h */,
-				FAAD5327FFC5728E3F2AC091F13575D9 /* mosquitto.c */,
-				DF06FF0E5DBD443D2787B910F49C405E /* mosquitto.h */,
-				0244A6C6E6BC5AD234EF9F5B590700F6 /* mosquitto_internal.h */,
-				13F5D2A9F13E64294DBBEAC4E9B2E451 /* mqtt3_protocol.h */,
-				D1E6AC90774237AD3EE6817AB7A1445A /* MQTTKit.h */,
-				82FA9B84ADCEBDB46E413333085BA75E /* MQTTKit.m */,
-				EB718E31E2186F5CE309312849ED8BBC /* net_mosq.c */,
-				7D17EA68E25EB06EA279ABDC41FEFB68 /* net_mosq.h */,
-				D84E6FECD0D18F0883E9C5F8C6E9836A /* read_handle.c */,
-				A31517818997718CAE25CDD1993973F3 /* read_handle.h */,
-				68176F8B91AE3BEFF6788445C5B46649 /* read_handle_client.c */,
-				DA46CBDEFD4151E65BE083C38924EDE4 /* read_handle_shared.c */,
-				2DCAA7E6EE5B0C6506E45BD0F2EE0BDA /* send_client_mosq.c */,
-				463F122405FF076C8D144CCCED2DE850 /* send_mosq.c */,
-				C4F28EFC0A2B14B7B33C4AAE79CECF27 /* send_mosq.h */,
-				D48ACC35C2F95A2489B8FCAFAF87CF4B /* thread_mosq.c */,
-				E3FA0BC14598F45864BB2754A58E1D2E /* time_mosq.c */,
-				577496498479C87554FA99F3F5BAB9C8 /* time_mosq.h */,
-				EB0B94B04D3AE06A0252660F5F133AD4 /* tls_mosq.c */,
-				042D3243F05FD9B64C0E38298D59B9F9 /* tls_mosq.h */,
-				03C5216657EED178659461CC23965F16 /* util_mosq.c */,
-				69CB55CAE03E949242E1904FCEE6F7C7 /* util_mosq.h */,
-				6D6CCB6438A544F1F7F978F861CACBD7 /* will_mosq.c */,
-				BCE6005ECC261A03103954314A5F57C5 /* will_mosq.h */,
-				04225DAE71E6AE8B1DACF4EACE72309F /* Support Files */,
-			);
-			path = MQTTKit;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D887CF4DE988A4011D994D2C74D791A4 /* MJRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				033F84A0FD380CEB896683E33B239CFA /* MJRefresh.h */,
-				B4C411CC53B4D0453D3D91379DD19878 /* MJRefreshAutoFooter.h */,
-				C0202D74539BF498397EE52CDD47784F /* MJRefreshAutoFooter.m */,
-				563199726AD079E1B2C6F68BA37FBA28 /* MJRefreshAutoGifFooter.h */,
-				EBA675F489F8012CF24D9339D8EF9BB2 /* MJRefreshAutoGifFooter.m */,
-				877FDF0E2FF7E43CCAC2C7535922DAB4 /* MJRefreshAutoNormalFooter.h */,
-				18492FF3E49BFDDD0D8362F18FFE1228 /* MJRefreshAutoNormalFooter.m */,
-				8402F0076F690B2AEF6C3669A14F9B52 /* MJRefreshAutoStateFooter.h */,
-				C1E1269E836805905BDFFF659CD6F0FC /* MJRefreshAutoStateFooter.m */,
-				B8756B3D3444D2A0215E4E217D70340E /* MJRefreshBackFooter.h */,
-				9F621EF7C28F3D74E62994E18EB4C1C6 /* MJRefreshBackFooter.m */,
-				B476E231B652FE655DDF05566ED5C2B0 /* MJRefreshBackGifFooter.h */,
-				F948E4385581339F359DE8BC05463F33 /* MJRefreshBackGifFooter.m */,
-				0BDB2281F662D4E27C0BF63CC63704F3 /* MJRefreshBackNormalFooter.h */,
-				947B31EB8AAA304E574D8B4A2F77A496 /* MJRefreshBackNormalFooter.m */,
-				FEF520A8B044E744FC45490689D0EB4D /* MJRefreshBackStateFooter.h */,
-				8AB348D276CFD2208AF17207DBC8C1EA /* MJRefreshBackStateFooter.m */,
-				68A4B6D06C074A147C59573DD17E234B /* MJRefreshComponent.h */,
-				A24281FCD5ED73B1DEBEEC8B700832A6 /* MJRefreshComponent.m */,
-				12BFD0A1544008B50825548BAC4FA286 /* MJRefreshConst.h */,
-				F36FFCF56B5451764DF619D88A833B97 /* MJRefreshConst.m */,
-				5FFA25D5EE04421E2C639843AC19BB42 /* MJRefreshFooter.h */,
-				ED7A38D5706387C6DCD1D5782E12D522 /* MJRefreshFooter.m */,
-				B156DFC5BFDAE7C5D4F2BB448EBBC329 /* MJRefreshGifHeader.h */,
-				7BF30ECEC1FF30816498CA526DB28C97 /* MJRefreshGifHeader.m */,
-				FCC1B57AF82162C163B90EDE477D0BC0 /* MJRefreshHeader.h */,
-				23D1706BA571799D28D688B831969C1D /* MJRefreshHeader.m */,
-				4AE8B7AE954EBB0ED978C328330E2297 /* MJRefreshNormalHeader.h */,
-				8B58333CF6B96C10C7E38E3073AB1136 /* MJRefreshNormalHeader.m */,
-				5DBFEA5303B0373AF8F45D422E6B8621 /* MJRefreshStateHeader.h */,
-				63BCE9EBCA3E6F17E9B54D84D8C40E63 /* MJRefreshStateHeader.m */,
-				EC325BF1563DD0642A4265BAA8EE5D6E /* NSBundle+MJRefresh.h */,
-				069CC6A13A41789E9A07ABB23E38F48E /* NSBundle+MJRefresh.m */,
-				D2B191450DCD78C4ABA612AE100049A0 /* UIScrollView+MJExtension.h */,
-				B56BAA5D8246B7CC059B30A038418BD0 /* UIScrollView+MJExtension.m */,
-				BB213D7D1A8400D25351A699724ECFEC /* UIScrollView+MJRefresh.h */,
-				03108B8E52ED897495AD700B6A351CED /* UIScrollView+MJRefresh.m */,
-				AA16EAB1481F24E0AC516DF71987405C /* UIView+MJExtension.h */,
-				F01BE2C12C7771F42D05AA1A8B3BF287 /* UIView+MJExtension.m */,
-				6FA771B9310C9DED2CC08324EC56448F /* Resources */,
-				96DB51F449B0C5D0839231365B3078B9 /* Support Files */,
-			);
-			path = MJRefresh;
-			sourceTree = "<group>";
-		};
-		E32507BDB03E09AE539AE860E7294DD4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				59CB0179FCDC790AED2F6937D8C2A17A /* AVOSCloud */,
-				E829E393942FA45585F51CA3E2C90175 /* AVOSCloudCrashReporting */,
-				D887CF4DE988A4011D994D2C74D791A4 /* MJRefresh */,
-				B96A0E2CFA25C85CD2E70FB88D7294CD /* MQTTKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E829E393942FA45585F51CA3E2C90175 /* AVOSCloudCrashReporting */ = {
-			isa = PBXGroup;
-			children = (
-				56B7CDA15DCFDD87D62E16431512AA38 /* AVOSCloudCrashReporting.h */,
-				2DCAD76ADA3BC4204C566A6BC26C3279 /* Frameworks */,
-			);
-			path = AVOSCloudCrashReporting;
-			sourceTree = "<group>";
-		};
-		F5EA198FFD6B21876A1A332E954447EA /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1CEF47FFA3C0D6F18D7C71BF697E24F0 /* Pods-ElectrombileManager */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXHeadersBuildPhase section */
-		34509A2745482CFBCF03BAAFEA0DAE4E /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C10291D821E77E019EC760D33F1DAB2B /* MJRefresh.h in Headers */,
-				2D7FBA552B3CED667D78641BD3DEF96C /* MJRefreshAutoFooter.h in Headers */,
-				6D40913F14E30C5027EDB1E8E5267456 /* MJRefreshAutoGifFooter.h in Headers */,
-				820AE72EE18049DB0D39950065ABA727 /* MJRefreshAutoNormalFooter.h in Headers */,
-				60B872A80D2C7EC0A342F16970BF22BB /* MJRefreshAutoStateFooter.h in Headers */,
-				1750E8156D634B9DCFCBDF366430F326 /* MJRefreshBackFooter.h in Headers */,
-				729824F7571ED25599AD2A5E1E831189 /* MJRefreshBackGifFooter.h in Headers */,
-				69E1CE5225A654934B2A36CCEECD0F82 /* MJRefreshBackNormalFooter.h in Headers */,
-				8355E9060CF4352ED0E21569A6FED32F /* MJRefreshBackStateFooter.h in Headers */,
-				1E88082E67EECA1458FA24BBF7677908 /* MJRefreshComponent.h in Headers */,
-				6401732D299AF2E66A86932AC8BB931D /* MJRefreshConst.h in Headers */,
-				401E263227EC555D61B8BBB94ED09D73 /* MJRefreshFooter.h in Headers */,
-				6ACE435B71030CD770DECAA65380285F /* MJRefreshGifHeader.h in Headers */,
-				881AB1EA374C9358F2A83F1D835D1B35 /* MJRefreshHeader.h in Headers */,
-				4A55E2CB58A23956EF1822F5A6DF5F2C /* MJRefreshNormalHeader.h in Headers */,
-				9347B960A275D7EEF8F79F348578B45D /* MJRefreshStateHeader.h in Headers */,
-				832385F31AACCFABD48F783C577C8785 /* NSBundle+MJRefresh.h in Headers */,
-				7BB5FA5A44FBC13830AE9E7731A38D7F /* UIScrollView+MJExtension.h in Headers */,
-				4C359B72D6BDE27D946D1B4D5A22DE00 /* UIScrollView+MJRefresh.h in Headers */,
-				B10A64BAF7708212BEE77303B46759A0 /* UIView+MJExtension.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D29F8D57C0B719A185AB3867BB1D1C44 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CF2B54BBC95C6F8B8C60D75E2DCC865A /* config.h in Headers */,
-				49C79F1E6A28D8F1137F991B67E4FFC6 /* dummypthread.h in Headers */,
-				0CD59E4A07679254FCD5F69EDFCDC7B6 /* logging_mosq.h in Headers */,
-				3AB6BCE6926858E6B5CE3A9568670B60 /* memory_mosq.h in Headers */,
-				702A36A2FB387BED332E93FE561203CF /* messages_mosq.h in Headers */,
-				468C3B68DEF2C90B587786775E4B1AFA /* mosquitto.h in Headers */,
-				5711B9C0974381FA41135A9460E7DF75 /* mosquitto_internal.h in Headers */,
-				132010EF9B5680FF1CE24C01545D568C /* mqtt3_protocol.h in Headers */,
-				45C257901E8F645FBF3015102728F0AC /* MQTTKit.h in Headers */,
-				12BE33D676B92DE06A2AE7B4A323E7C8 /* net_mosq.h in Headers */,
-				59F6E6FE2D22A9ACB59760DA962E319E /* read_handle.h in Headers */,
-				8E34C2C41BB9A646C73B40CC13C3A3A5 /* send_mosq.h in Headers */,
-				3FCBC8DED7E48831872465294DDB9B6E /* time_mosq.h in Headers */,
-				C70624D2FCE51ACAEE1499BE2F2CB268 /* tls_mosq.h in Headers */,
-				A82BB748CD97C5F0B8128EC4B54F5CB6 /* util_mosq.h in Headers */,
-				E4ED52BE75F1191E119E354A91E1CD29 /* will_mosq.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
-/* Begin PBXNativeTarget section */
-		70BC44266C6FFE30D2C57129458E070B /* MJRefresh */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04C1DB49FA812C21EEEBEE206A0ED54E /* Build configuration list for PBXNativeTarget "MJRefresh" */;
-			buildPhases = (
-				94BDFDFA4567D11ADBE332123689D3BD /* Sources */,
-				91247678E3E2D23B0BF2C3EF48002167 /* Frameworks */,
-				34509A2745482CFBCF03BAAFEA0DAE4E /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MJRefresh;
-			productName = MJRefresh;
-			productReference = 28123F2CB5E684BD45D22BFAF49744EA /* libMJRefresh.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		74CD2F578138157E0B27CCEE08C069EF /* MQTTKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 666E39B1203DC576AF2A1F565441934B /* Build configuration list for PBXNativeTarget "MQTTKit" */;
-			buildPhases = (
-				16E4B56304FD688C88BA622B53F5F464 /* Sources */,
-				9278550544296A135AD73F057D0C80F8 /* Frameworks */,
-				D29F8D57C0B719A185AB3867BB1D1C44 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MQTTKit;
-			productName = MQTTKit;
-			productReference = E9D2CED04DDF0D48B7F2002A4D2CD518 /* libMQTTKit.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		80E52358F49EC68DC20811E50E469524 /* Pods-ElectrombileManager */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 495AE45C75E8C0E103A415E097F60678 /* Build configuration list for PBXNativeTarget "Pods-ElectrombileManager" */;
-			buildPhases = (
-				BFFD8DB7A9A666265CA6F32D8F3B11DF /* Sources */,
-				716E21940E48DEC8AE1AFE6355C66A9A /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4956D7113B82369A17F6016E72184AE4 /* PBXTargetDependency */,
-				A253E0C185081AFD8E5FB710742CD42D /* PBXTargetDependency */,
-			);
-			name = "Pods-ElectrombileManager";
-			productName = "Pods-ElectrombileManager";
-			productReference = 29EE94C475E4A097EF6003AE5A1B6662 /* libPods-ElectrombileManager.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
-			};
-			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-			);
-			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 315D23F3B0A45E26640DC41007CD5CE2 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				70BC44266C6FFE30D2C57129458E070B /* MJRefresh */,
-				74CD2F578138157E0B27CCEE08C069EF /* MQTTKit */,
-				80E52358F49EC68DC20811E50E469524 /* Pods-ElectrombileManager */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXSourcesBuildPhase section */
-		16E4B56304FD688C88BA622B53F5F464 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F07282C44C6E921780365CD5A0A798A0 /* logging_mosq.c in Sources */,
-				124D206D1CA6C238834B2F2685225D86 /* memory_mosq.c in Sources */,
-				609F826CF03C38AD57FD4755AE2C19B0 /* messages_mosq.c in Sources */,
-				BF2F903B2423040CD1EE653A7EA71BEF /* mosquitto.c in Sources */,
-				BA4BB0AAC5D763942B85DD3856FCC790 /* MQTTKit-dummy.m in Sources */,
-				FC257C7C2E81FFE7B228DEB698755BC6 /* MQTTKit.m in Sources */,
-				0F36AAF946576A69BCF65416D5AB1FFE /* net_mosq.c in Sources */,
-				DD90519B83D4EDC272FA46904BA2D9F8 /* read_handle.c in Sources */,
-				0C6C78C2FEC153CE1B94E5C1A494B8DB /* read_handle_client.c in Sources */,
-				C6931B427F567C8B2FA563BC6F0B31D1 /* read_handle_shared.c in Sources */,
-				5C849F6751AD884C01F2B63E7F766170 /* send_client_mosq.c in Sources */,
-				0A826B08486ABB621A01FC09FC3307D0 /* send_mosq.c in Sources */,
-				2E7B9CD345D22DF637EF482ED0A43FE4 /* thread_mosq.c in Sources */,
-				8AFD2BCCC8AB03B5E750D194C0193480 /* time_mosq.c in Sources */,
-				CE70903D30721393D18219789D9D1829 /* tls_mosq.c in Sources */,
-				F92D9215C6F6FAEB63F7FBF3ACEAAB8D /* util_mosq.c in Sources */,
-				1D6CB9214CA0040D336A3009D4761EEA /* will_mosq.c in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94BDFDFA4567D11ADBE332123689D3BD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CEFDC58C7241F86D92DEF8EDFCE7DF99 /* MJRefresh-dummy.m in Sources */,
-				C0266DA702333927677C77CC3FCB8390 /* MJRefreshAutoFooter.m in Sources */,
-				B7B6154D69B450647A1787A95ECAD0F2 /* MJRefreshAutoGifFooter.m in Sources */,
-				A2F6E9757ACC5A5FFACE3FE77F525BBB /* MJRefreshAutoNormalFooter.m in Sources */,
-				2427E2F0CA20B2924D366EA986934663 /* MJRefreshAutoStateFooter.m in Sources */,
-				E7A8DDD289D3BFB8950D29CBF67C7132 /* MJRefreshBackFooter.m in Sources */,
-				F01687C8E9A3E4F8A528BE97DE7BDB80 /* MJRefreshBackGifFooter.m in Sources */,
-				5A18A32422C5C66F04A1803B4E06737A /* MJRefreshBackNormalFooter.m in Sources */,
-				1F48696AD698115D898EC7CCD60D075A /* MJRefreshBackStateFooter.m in Sources */,
-				F52763D22F95CF0A6F8491822F37BF5D /* MJRefreshComponent.m in Sources */,
-				4F367DCDFE766D2A4DB80B51A41AACA0 /* MJRefreshConst.m in Sources */,
-				E954B9D3A283FB30A945CE8823E102DD /* MJRefreshFooter.m in Sources */,
-				F3AC7C93C770A6F7918EA23972C1762A /* MJRefreshGifHeader.m in Sources */,
-				499211EAF9B4ACA6D9DC215454184F4D /* MJRefreshHeader.m in Sources */,
-				4548D482088C76C3191E06CDFD55A8E3 /* MJRefreshNormalHeader.m in Sources */,
-				8A9118E83980D38CDCA9C5476CDBEC66 /* MJRefreshStateHeader.m in Sources */,
-				777A861D7A0ED7A46ED02C5611EDC9FD /* NSBundle+MJRefresh.m in Sources */,
-				6E9813A3A92FBA6F262C2C9EA2D60D14 /* UIScrollView+MJExtension.m in Sources */,
-				467ADC9DF6A1E6193FE860E7DF3E8D07 /* UIScrollView+MJRefresh.m in Sources */,
-				44529459406814AB948DF5BFEEA0A227 /* UIView+MJExtension.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BFFD8DB7A9A666265CA6F32D8F3B11DF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E18AFF24E93352E04326B85AFDA366DA /* Pods-ElectrombileManager-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4956D7113B82369A17F6016E72184AE4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MJRefresh;
-			target = 70BC44266C6FFE30D2C57129458E070B /* MJRefresh */;
-			targetProxy = 7903E4FEB21258D8EFC0626B55C720DB /* PBXContainerItemProxy */;
-		};
-		A253E0C185081AFD8E5FB710742CD42D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = MQTTKit;
-			target = 74CD2F578138157E0B27CCEE08C069EF /* MQTTKit */;
-			targetProxy = EC5E91D0C92704CC7F1F28D867F23864 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin XCBuildConfiguration section */
-		3FA2475660FFC880302AD18E29B2E5FC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_DEBUG=1",
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Debug;
-		};
-		4B6321052A94E5BC5BB2D5A222AC6277 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4549CE5957FC3D032C0C52293F99D9C0 /* MJRefresh.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		698423B2B884C8DAE4F3D48DB15EABBD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F06CACBC453F6F5A8C41534BC169F5CA /* Pods-ElectrombileManager.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		837600B0981BCB3557C2237DB05BC004 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92FDF3B4FC8251045B9EBBB2FFD5E1D9 /* MQTTKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MQTTKit/MQTTKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		8C1144FC02FCC0B0F367789DF23E4633 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5EE3BE9830747621B1CC554FFCEE08A /* Pods-ElectrombileManager.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		90B4D11D505F86542006276D26F555A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4549CE5957FC3D032C0C52293F99D9C0 /* MJRefresh.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MJRefresh/MJRefresh-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		D746CE859AC7B54165099775628DEC5E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92FDF3B4FC8251045B9EBBB2FFD5E1D9 /* MQTTKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MQTTKit/MQTTKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		F325026B55060D3B22BEC0BAB5FA7344 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		04C1DB49FA812C21EEEBEE206A0ED54E /* Build configuration list for PBXNativeTarget "MJRefresh" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				90B4D11D505F86542006276D26F555A3 /* Debug */,
-				4B6321052A94E5BC5BB2D5A222AC6277 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3FA2475660FFC880302AD18E29B2E5FC /* Debug */,
-				F325026B55060D3B22BEC0BAB5FA7344 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		495AE45C75E8C0E103A415E097F60678 /* Build configuration list for PBXNativeTarget "Pods-ElectrombileManager" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				698423B2B884C8DAE4F3D48DB15EABBD /* Debug */,
-				8C1144FC02FCC0B0F367789DF23E4633 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		666E39B1203DC576AF2A1F565441934B /* Build configuration list for PBXNativeTarget "MQTTKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				837600B0981BCB3557C2237DB05BC004 /* Debug */,
-				D746CE859AC7B54165099775628DEC5E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>02D7261839BF70DC62F6FCEEE14540E8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVAnalytics.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>03C1E79E9985122819F71428CC8285EB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>read_handle_client.c</string>
+			<key>path</key>
+			<string>libmosquitto/read_handle_client.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>04C1DB49FA812C21EEEBEE206A0ED54E</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>90B4D11D505F86542006276D26F555A3</string>
+				<string>4B6321052A94E5BC5BB2D5A222AC6277</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>08878836A22BBD5FB464ECE809CF96F3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F06CACBC453F6F5A8C41534BC169F5CA</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>0A826B08486ABB621A01FC09FC3307D0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BBF7DD88449BFD970DBDF318EEDF4888</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>0ACB8F72DAA081A5019B9899127985C2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>logging_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/logging_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0AFC70C68247F535DAD8AEB757173120</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>thread_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/thread_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0AFDBD4BC3635F9901ECBA6C6173EE1A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0B27F0BB5B62E086F2BECD91F15907F8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MQTTKit-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0B6F7F90F165D3687A2709ED93E025F4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MQTTKit-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0C6C78C2FEC153CE1B94E5C1A494B8DB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>03C1E79E9985122819F71428CC8285EB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>0CD59E4A07679254FCD5F69EDFCDC7B6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>95FFC498FF45A3855B4412BA73403E48</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>0D64DF6225ECD6A7FF11CE8317F31CF5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B3423E759CA092D7F6577B2F94290967</string>
+				<string>D783DE229753BCAB430764D7F15520AA</string>
+				<string>0ACB8F72DAA081A5019B9899127985C2</string>
+				<string>95FFC498FF45A3855B4412BA73403E48</string>
+				<string>9AB0597B0CF276632468A594EFE0D898</string>
+				<string>8BF235BEF2FCA428E8043B2A8D1F0165</string>
+				<string>75FCFBE5CE67CCE7F90E68B42FB8F05D</string>
+				<string>521A4F26AE239E9BDF8BFC0EF52CE5D2</string>
+				<string>4F1D08D758A8AA181320EE022D1895D5</string>
+				<string>66828DF35F527CDC7BB13611066F048D</string>
+				<string>E0A269EC604F5648620F6823A0827EEB</string>
+				<string>FF3CFDC271EDCFACE96BE9799A65BBC8</string>
+				<string>6D4E8C9B1EF1CEC827C907329F58C3AA</string>
+				<string>7ABF2524828D223F962D775863A8B7D6</string>
+				<string>D1BD6A309AD068D7157C9E1EB78662DC</string>
+				<string>8D31D862A8A256EDD7DFC2A3D6E4505A</string>
+				<string>95B1AA9D9F19C5CDBE27ED173489DD8A</string>
+				<string>1C329F9B8E21A784D9BC289239B2401E</string>
+				<string>03C1E79E9985122819F71428CC8285EB</string>
+				<string>56B318D68B33B1CB64CEF9A622E55DFD</string>
+				<string>FCE7E0DBA6BBF699FEFF99856C2AF4E6</string>
+				<string>BBF7DD88449BFD970DBDF318EEDF4888</string>
+				<string>37D9AD0D8EAB21969CBB74F5FF1BE38D</string>
+				<string>0AFC70C68247F535DAD8AEB757173120</string>
+				<string>64CB758084B18192F704498EAD0325E0</string>
+				<string>517CCCD64AB688C4215AC70B380A4CB1</string>
+				<string>7C93FCCC22DB0386E468E9488B12588E</string>
+				<string>570BE6A8EEA1F6A3B32B2E8AEF313982</string>
+				<string>675BBF57565A00762DC4D13D19EAEECD</string>
+				<string>326C616295AC2A9A2B232E1EFDB52777</string>
+				<string>FE34CEA5EE8D523CD746616F03B2047E</string>
+				<string>F22C524A1FE040DE5C14E41B71F7D5E4</string>
+				<string>F97C9816000540709FF40C1BDA19D085</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MQTTKit</string>
+			<key>path</key>
+			<string>MQTTKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>0D82DC9B2E3B57C4421C10AEA49C6D75</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>0F36AAF946576A69BCF65416D5AB1FFE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D1BD6A309AD068D7157C9E1EB78662DC</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>0FB8841E56228BC09D0367600C3FD4C6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>NSBundle+MJRefresh.h</string>
+			<key>path</key>
+			<string>MJRefresh/NSBundle+MJRefresh.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>112ED9ED5E47FDD91B62123C56865048</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshNormalHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshNormalHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>118F985B1AE679EBDD6DAB0FB5A90E3B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshConst.h</string>
+			<key>path</key>
+			<string>MJRefresh/MJRefreshConst.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1193652267C032667381B1C3CAB4D4A7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshBackStateFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>124D206D1CA6C238834B2F2685225D86</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9AB0597B0CF276632468A594EFE0D898</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>12BE33D676B92DE06A2AE7B4A323E7C8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8D31D862A8A256EDD7DFC2A3D6E4505A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>132010EF9B5680FF1CE24C01545D568C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FF3CFDC271EDCFACE96BE9799A65BBC8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>16E4B56304FD688C88BA622B53F5F464</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F07282C44C6E921780365CD5A0A798A0</string>
+				<string>124D206D1CA6C238834B2F2685225D86</string>
+				<string>609F826CF03C38AD57FD4755AE2C19B0</string>
+				<string>BF2F903B2423040CD1EE653A7EA71BEF</string>
+				<string>BA4BB0AAC5D763942B85DD3856FCC790</string>
+				<string>FC257C7C2E81FFE7B228DEB698755BC6</string>
+				<string>0F36AAF946576A69BCF65416D5AB1FFE</string>
+				<string>DD90519B83D4EDC272FA46904BA2D9F8</string>
+				<string>0C6C78C2FEC153CE1B94E5C1A494B8DB</string>
+				<string>C6931B427F567C8B2FA563BC6F0B31D1</string>
+				<string>5C849F6751AD884C01F2B63E7F766170</string>
+				<string>0A826B08486ABB621A01FC09FC3307D0</string>
+				<string>2E7B9CD345D22DF637EF482ED0A43FE4</string>
+				<string>8AFD2BCCC8AB03B5E750D194C0193480</string>
+				<string>CE70903D30721393D18219789D9D1829</string>
+				<string>F92D9215C6F6FAEB63F7FBF3ACEAAB8D</string>
+				<string>1D6CB9214CA0040D336A3009D4761EEA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1750E8156D634B9DCFCBDF366430F326</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8CC0420A33F829E826D353A5EC34F04C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>190C2DA7FEE76998826F919A012FCBD5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIScrollView+MJExtension.h</string>
+			<key>path</key>
+			<string>MJRefresh/UIScrollView+MJExtension.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1B6E5460D7E4E603B9D80E82E2FFC376</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVSignature.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C329F9B8E21A784D9BC289239B2401E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>read_handle.h</string>
+			<key>path</key>
+			<string>libmosquitto/read_handle.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C5071A96C9F8159F8663DDB10F20626</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshBackNormalFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1C96E3820EFCB4D182C5776566686B6E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshBackFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshBackFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1CEF47FFA3C0D6F18D7C71BF697E24F0</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>C03C39BC12FFB26F7D6AC0243512DEC2</string>
+				<string>236FA023EEEF259BEE17B8411E2B877B</string>
+				<string>35C0216630B14C9F8DD0F22A3E44B657</string>
+				<string>1EC3F0FB788C30A540A5FAD5F35498D1</string>
+				<string>DA0CFDDE216EB50BC7F774F4DF8F5D9D</string>
+				<string>F06CACBC453F6F5A8C41534BC169F5CA</string>
+				<string>A5EE3BE9830747621B1CC554FFCEE08A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-ElectrombileManager</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-ElectrombileManager</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1D6CB9214CA0040D336A3009D4761EEA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FE34CEA5EE8D523CD746616F03B2047E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>1E88082E67EECA1458FA24BBF7677908</key>
+		<dict>
+			<key>fileRef</key>
+			<string>3487A3A2CBD895938F04A744346B7AD4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>1EC3F0FB788C30A540A5FAD5F35498D1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElectrombileManager-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1F48696AD698115D898EC7CCD60D075A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1193652267C032667381B1C3CAB4D4A7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>1FBD97B6167C6E3E461F2D02F6DE9F31</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVLogger.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>20EAF431F0E5D66C36B293F7B89B5655</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>NSBundle+MJRefresh.m</string>
+			<key>path</key>
+			<string>MJRefresh/NSBundle+MJRefresh.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>236FA023EEEF259BEE17B8411E2B877B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-ElectrombileManager-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2427E2F0CA20B2924D366EA986934663</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5A4C53EA9EEE666B00DB25D221292B2F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>28123F2CB5E684BD45D22BFAF49744EA</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libMJRefresh.a</string>
+			<key>path</key>
+			<string>libMJRefresh.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>29EE94C475E4A097EF6003AE5A1B6662</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-ElectrombileManager.a</string>
+			<key>path</key>
+			<string>libPods-ElectrombileManager.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>2A683DE00A50B2AD1532040E2610145D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>archive.ar</string>
+			<key>path</key>
+			<string>libAVOSCloudCrashReporting.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>2D7FBA552B3CED667D78641BD3DEF96C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6E2FEE71FEC3CC3FB873003AD3CF5A79</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>47BEF9D903506B003EA5C2B249729489</string>
+				<string>AAF678CED40D3499169D10F63CA0719E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>2E7B9CD345D22DF637EF482ED0A43FE4</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0AFC70C68247F535DAD8AEB757173120</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>315D23F3B0A45E26640DC41007CD5CE2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>28123F2CB5E684BD45D22BFAF49744EA</string>
+				<string>E9D2CED04DDF0D48B7F2002A4D2CD518</string>
+				<string>29EE94C475E4A097EF6003AE5A1B6662</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>31A156193BC96B97A5F13CD02ED5EF2A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVFileQuery.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3215715425C58DF64B1D4653FCAF594C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVInstallation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>326C616295AC2A9A2B232E1EFDB52777</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>util_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/util_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>34509A2745482CFBCF03BAAFEA0DAE4E</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>C10291D821E77E019EC760D33F1DAB2B</string>
+				<string>2D7FBA552B3CED667D78641BD3DEF96C</string>
+				<string>6D40913F14E30C5027EDB1E8E5267456</string>
+				<string>820AE72EE18049DB0D39950065ABA727</string>
+				<string>60B872A80D2C7EC0A342F16970BF22BB</string>
+				<string>1750E8156D634B9DCFCBDF366430F326</string>
+				<string>729824F7571ED25599AD2A5E1E831189</string>
+				<string>69E1CE5225A654934B2A36CCEECD0F82</string>
+				<string>8355E9060CF4352ED0E21569A6FED32F</string>
+				<string>1E88082E67EECA1458FA24BBF7677908</string>
+				<string>6401732D299AF2E66A86932AC8BB931D</string>
+				<string>401E263227EC555D61B8BBB94ED09D73</string>
+				<string>6ACE435B71030CD770DECAA65380285F</string>
+				<string>881AB1EA374C9358F2A83F1D835D1B35</string>
+				<string>4A55E2CB58A23956EF1822F5A6DF5F2C</string>
+				<string>9347B960A275D7EEF8F79F348578B45D</string>
+				<string>832385F31AACCFABD48F783C577C8785</string>
+				<string>7BB5FA5A44FBC13830AE9E7731A38D7F</string>
+				<string>4C359B72D6BDE27D946D1B4D5A22DE00</string>
+				<string>B10A64BAF7708212BEE77303B46759A0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>3487A3A2CBD895938F04A744346B7AD4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshComponent.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshComponent.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3513733EF799131F18A3E5B7E7787F96</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVGroup.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>35C0216630B14C9F8DD0F22A3E44B657</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-ElectrombileManager-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>35F18AAF09777F272BB6429F479BA694</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVOSCloud.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>37D9AD0D8EAB21969CBB74F5FF1BE38D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>send_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/send_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>38CF7D644821BC99A5A486C7B0B49AF3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>BaiduMapAPI_Utils.framework</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Utils.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3AB6BCE6926858E6B5CE3A9568670B60</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8BF235BEF2FCA428E8043B2A8D1F0165</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>3DCAB2B7CDE207B3958B6CB957FCC758</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>iOS</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3FCBC8DED7E48831872465294DDB9B6E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>517CCCD64AB688C4215AC70B380A4CB1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>401E263227EC555D61B8BBB94ED09D73</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FD45133E0EBFAA479F277CE9FD96004D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>44529459406814AB948DF5BFEEA0A227</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C730F1D923DE008EDF6C9B8FDB7E761E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4548D482088C76C3191E06CDFD55A8E3</key>
+		<dict>
+			<key>fileRef</key>
+			<string>112ED9ED5E47FDD91B62123C56865048</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>45C257901E8F645FBF3015102728F0AC</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6D4E8C9B1EF1CEC827C907329F58C3AA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>45C74E7239C6B686A0D22493341FF067</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshStateHeader.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshStateHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>467ADC9DF6A1E6193FE860E7DF3E8D07</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F4647EC98AA905F286040E25060122F0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>468C3B68DEF2C90B587786775E4B1AFA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>66828DF35F527CDC7BB13611066F048D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>47BEF9D903506B003EA5C2B249729489</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>ENABLE_TESTABILITY</key>
+				<string>YES</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_DEBUG=1</string>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4956D7113B82369A17F6016E72184AE4</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MJRefresh</string>
+			<key>target</key>
+			<string>70BC44266C6FFE30D2C57129458E070B</string>
+			<key>targetProxy</key>
+			<string>7903E4FEB21258D8EFC0626B55C720DB</string>
+		</dict>
+		<key>495AE45C75E8C0E103A415E097F60678</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>08878836A22BBD5FB464ECE809CF96F3</string>
+				<string>9F39C0DE118394C0D7ED307D6382C7FC</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>499211EAF9B4ACA6D9DC215454184F4D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0AFDBD4BC3635F9901ECBA6C6173EE1A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>49C79F1E6A28D8F1137F991B67E4FFC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D783DE229753BCAB430764D7F15520AA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4A55E2CB58A23956EF1822F5A6DF5F2C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C69B26E53D67D5294F2BED4352F92B3</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4B264BE09217844AFFE9FDEBC915E8D2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>6A311D8E4F707F5B68B867CC0CA66D02</string>
+				<string>6E2FEE71FEC3CC3FB873003AD3CF5A79</string>
+				<string>CE80F79E5BC917373670151181B466D0</string>
+				<string>52C35EEB82FEC1691170479094FC66BB</string>
+				<string>6FD2AEE7FDF67BB9EF5F377847F6403B</string>
+				<string>8DD3E68F303090DE7D1792F806D38D9A</string>
+				<string>8065DE43F1237552918548F388A4B0B6</string>
+				<string>808AFEB51C23DDBE85CF130BE431304B</string>
+				<string>5A4C53EA9EEE666B00DB25D221292B2F</string>
+				<string>8CC0420A33F829E826D353A5EC34F04C</string>
+				<string>1C96E3820EFCB4D182C5776566686B6E</string>
+				<string>F813CE77ED47533F1C793314A503414F</string>
+				<string>BD7BE2371CE6E9F347B90E878482C3B0</string>
+				<string>1C5071A96C9F8159F8663DDB10F20626</string>
+				<string>4FE4C5304DA50F316B8B6229553FDB91</string>
+				<string>4FC1EE32BD05ADD59B024C947E33D17C</string>
+				<string>1193652267C032667381B1C3CAB4D4A7</string>
+				<string>3487A3A2CBD895938F04A744346B7AD4</string>
+				<string>B7F19D2AB4831A7997383F601F3BA39F</string>
+				<string>118F985B1AE679EBDD6DAB0FB5A90E3B</string>
+				<string>AEADA9162308E48B2D89905EFB7AF26C</string>
+				<string>FD45133E0EBFAA479F277CE9FD96004D</string>
+				<string>C3D30FEBD6371EBAEB477F9160F0B2D4</string>
+				<string>760E2430606E6A34B20D6A93DD4D1D95</string>
+				<string>A582D1C3F046A24976616AA9E1A6D98F</string>
+				<string>F9A17E39DEF49FB1905B938B63E95AA8</string>
+				<string>0AFDBD4BC3635F9901ECBA6C6173EE1A</string>
+				<string>7C69B26E53D67D5294F2BED4352F92B3</string>
+				<string>112ED9ED5E47FDD91B62123C56865048</string>
+				<string>45C74E7239C6B686A0D22493341FF067</string>
+				<string>9609D1D58132FFA5DF51DEFE904DE202</string>
+				<string>0FB8841E56228BC09D0367600C3FD4C6</string>
+				<string>20EAF431F0E5D66C36B293F7B89B5655</string>
+				<string>190C2DA7FEE76998826F919A012FCBD5</string>
+				<string>D0FCD9B2B551CE674A47DDEDFE26FAD0</string>
+				<string>991EAB5C59869BA64F3267595ABB54EA</string>
+				<string>F4647EC98AA905F286040E25060122F0</string>
+				<string>FD4046C6522AD68C8B5C25811DBC5A49</string>
+				<string>C730F1D923DE008EDF6C9B8FDB7E761E</string>
+				<string>96621F7971C7781D59929EF6318C56B6</string>
+				<string>8230E8A3BF67D319A8ABD3500B4B67AA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>MJRefresh</string>
+			<key>path</key>
+			<string>MJRefresh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4B6321052A94E5BC5BB2D5A222AC6277</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>669C7E88E884A4B26CA4585844C20FA4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MJRefresh/MJRefresh-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4C359B72D6BDE27D946D1B4D5A22DE00</key>
+		<dict>
+			<key>fileRef</key>
+			<string>991EAB5C59869BA64F3267595ABB54EA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>4D2DAB7EA803340781358D542B39EB9D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVObject+Subclass.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4F1D08D758A8AA181320EE022D1895D5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>mosquitto.c</string>
+			<key>path</key>
+			<string>libmosquitto/mosquitto.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4F367DCDFE766D2A4DB80B51A41AACA0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>AEADA9162308E48B2D89905EFB7AF26C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4FC1EE32BD05ADD59B024C947E33D17C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshBackStateFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackStateFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4FE4C5304DA50F316B8B6229553FDB91</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshBackNormalFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackNormalFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>517CCCD64AB688C4215AC70B380A4CB1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>time_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/time_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>521A4F26AE239E9BDF8BFC0EF52CE5D2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>messages_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/messages_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>52C35EEB82FEC1691170479094FC66BB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshAutoGifFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5475AD06E9F0D29653F2F9A470C28248</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>BaiduMapAPI_Base.framework</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Base.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>55E0B9A2C059A009C39200E12574C6C6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVCloudQueryResult.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56B318D68B33B1CB64CEF9A622E55DFD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>read_handle_shared.c</string>
+			<key>path</key>
+			<string>libmosquitto/read_handle_shared.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>56E1EB97FA79D371672D6829BCEF9590</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>FF48861ACB7CFA05FC1645B744D3778C</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>570BE6A8EEA1F6A3B32B2E8AEF313982</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>tls_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/tls_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5711B9C0974381FA41135A9460E7DF75</key>
+		<dict>
+			<key>fileRef</key>
+			<string>E0A269EC604F5648620F6823A0827EEB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5816222099D85A051EB9A5576681E50A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVObject.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>59F6E6FE2D22A9ACB59760DA962E319E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C329F9B8E21A784D9BC289239B2401E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>5A18A32422C5C66F04A1803B4E06737A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4FE4C5304DA50F316B8B6229553FDB91</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5A4C53EA9EEE666B00DB25D221292B2F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshAutoStateFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5C849F6751AD884C01F2B63E7F766170</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FCE7E0DBA6BBF699FEFF99856C2AF4E6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>5F4366A57069E106068B6DB9B4043A1C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVHistoryMessageQuery.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5FC4FAFD104E4E19DC6BB6E5870F9FA3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVSubclassing.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>609F826CF03C38AD57FD4755AE2C19B0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>75FCFBE5CE67CCE7F90E68B42FB8F05D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>60B872A80D2C7EC0A342F16970BF22BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>808AFEB51C23DDBE85CF130BE431304B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6401732D299AF2E66A86932AC8BB931D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>118F985B1AE679EBDD6DAB0FB5A90E3B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>64CB758084B18192F704498EAD0325E0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>time_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/time_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>666E39B1203DC576AF2A1F565441934B</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>837600B0981BCB3557C2237DB05BC004</string>
+				<string>D746CE859AC7B54165099775628DEC5E</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>66828DF35F527CDC7BB13611066F048D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>mosquitto.h</string>
+			<key>path</key>
+			<string>libmosquitto/mosquitto.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>669C7E88E884A4B26CA4585844C20FA4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>MJRefresh.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>675BBF57565A00762DC4D13D19EAEECD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>util_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/util_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>69E1CE5225A654934B2A36CCEECD0F82</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C5071A96C9F8159F8663DDB10F20626</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6A311D8E4F707F5B68B867CC0CA66D02</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefresh.h</string>
+			<key>path</key>
+			<string>MJRefresh/MJRefresh.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6ACE435B71030CD770DECAA65380285F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>760E2430606E6A34B20D6A93DD4D1D95</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6D40913F14E30C5027EDB1E8E5267456</key>
+		<dict>
+			<key>fileRef</key>
+			<string>52C35EEB82FEC1691170479094FC66BB</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>6D4E8C9B1EF1CEC827C907329F58C3AA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MQTTKit.h</string>
+			<key>path</key>
+			<string>MQTTKit/MQTTKit.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6E2FEE71FEC3CC3FB873003AD3CF5A79</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshAutoFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshAutoFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6E9813A3A92FBA6F262C2C9EA2D60D14</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D0FCD9B2B551CE674A47DDEDFE26FAD0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>6FD2AEE7FDF67BB9EF5F377847F6403B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshAutoGifFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoGifFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>702A36A2FB387BED332E93FE561203CF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>521A4F26AE239E9BDF8BFC0EF52CE5D2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>70BC44266C6FFE30D2C57129458E070B</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>04C1DB49FA812C21EEEBEE206A0ED54E</string>
+			<key>buildPhases</key>
+			<array>
+				<string>94BDFDFA4567D11ADBE332123689D3BD</string>
+				<string>91247678E3E2D23B0BF2C3EF48002167</string>
+				<string>34509A2745482CFBCF03BAAFEA0DAE4E</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>MJRefresh</string>
+			<key>productName</key>
+			<string>MJRefresh</string>
+			<key>productReference</key>
+			<string>28123F2CB5E684BD45D22BFAF49744EA</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>716E21940E48DEC8AE1AFE6355C66A9A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>75036CE65B8811D4A81FA11D7B969D30</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>71C7F9EE72E350D0578E49FA63B7147A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVUser.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>729824F7571ED25599AD2A5E1E831189</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F813CE77ED47533F1C793314A503414F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>74CD2F578138157E0B27CCEE08C069EF</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>666E39B1203DC576AF2A1F565441934B</string>
+			<key>buildPhases</key>
+			<array>
+				<string>16E4B56304FD688C88BA622B53F5F464</string>
+				<string>9278550544296A135AD73F057D0C80F8</string>
+				<string>D29F8D57C0B719A185AB3867BB1D1C44</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>MQTTKit</string>
+			<key>productName</key>
+			<string>MQTTKit</string>
+			<key>productReference</key>
+			<string>E9D2CED04DDF0D48B7F2002A4D2CD518</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>75036CE65B8811D4A81FA11D7B969D30</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>75FCFBE5CE67CCE7F90E68B42FB8F05D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>messages_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/messages_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>760E2430606E6A34B20D6A93DD4D1D95</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshGifHeader.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshGifHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>777A861D7A0ED7A46ED02C5611EDC9FD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>20EAF431F0E5D66C36B293F7B89B5655</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>78E642FD20DDC06D7DB26D73AD4B74C9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CEC22C73C1608DFA5D5D78BDCB218219</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>7903E4FEB21258D8EFC0626B55C720DB</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>70BC44266C6FFE30D2C57129458E070B</string>
+			<key>remoteInfo</key>
+			<string>MJRefresh</string>
+		</dict>
+		<key>7A0B81EA175CA43758888349B66ECC18</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVGeoPoint.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7ABF2524828D223F962D775863A8B7D6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MQTTKit.m</string>
+			<key>path</key>
+			<string>MQTTKit/MQTTKit.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7BB5FA5A44FBC13830AE9E7731A38D7F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>190C2DA7FEE76998826F919A012FCBD5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>7C69B26E53D67D5294F2BED4352F92B3</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshNormalHeader.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshNormalHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7C93FCCC22DB0386E468E9488B12588E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>tls_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/tls_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7DB346D0F39D3F0E887471402A8071AB</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
+				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
+				<string>A21058485C06EABB5EB9F50FCE035BAF</string>
+				<string>315D23F3B0A45E26640DC41007CD5CE2</string>
+				<string>F5EA198FFD6B21876A1A332E954447EA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7EA27E09CF69EAC86C69C367A9D8FF1F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVHistoryMessage.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8065DE43F1237552918548F388A4B0B6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshAutoNormalFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>808AFEB51C23DDBE85CF130BE431304B</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshAutoStateFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoStateFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>80E52358F49EC68DC20811E50E469524</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>495AE45C75E8C0E103A415E097F60678</string>
+			<key>buildPhases</key>
+			<array>
+				<string>BFFD8DB7A9A666265CA6F32D8F3B11DF</string>
+				<string>716E21940E48DEC8AE1AFE6355C66A9A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>4956D7113B82369A17F6016E72184AE4</string>
+				<string>A253E0C185081AFD8E5FB710742CD42D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-ElectrombileManager</string>
+			<key>productName</key>
+			<string>Pods-ElectrombileManager</string>
+			<key>productReference</key>
+			<string>29EE94C475E4A097EF6003AE5A1B6662</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>820AE72EE18049DB0D39950065ABA727</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8DD3E68F303090DE7D1792F806D38D9A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>8230E8A3BF67D319A8ABD3500B4B67AA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>669C7E88E884A4B26CA4585844C20FA4</string>
+				<string>B4995BD9918A6C22BAC13A6D5B582FAA</string>
+				<string>FF885BE8F853DE3581C1DE3D55A9B6C1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MJRefresh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>832385F31AACCFABD48F783C577C8785</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0FB8841E56228BC09D0367600C3FD4C6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>8355E9060CF4352ED0E21569A6FED32F</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4FC1EE32BD05ADD59B024C947E33D17C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>837600B0981BCB3557C2237DB05BC004</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B3B45F173B01442CDBDCE0B54A881ED4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MQTTKit/MQTTKit-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>84069E71E708729A1D523F5D035A923C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVRelation.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8522F31F4AA62E2F651C8A6E2091DEE6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVSearchSortBuilder.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>881AB1EA374C9358F2A83F1D835D1B35</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F9A17E39DEF49FB1905B938B63E95AA8</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>8A9118E83980D38CDCA9C5476CDBEC66</key>
+		<dict>
+			<key>fileRef</key>
+			<string>9609D1D58132FFA5DF51DEFE904DE202</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>8AFD2BCCC8AB03B5E750D194C0193480</key>
+		<dict>
+			<key>fileRef</key>
+			<string>64CB758084B18192F704498EAD0325E0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>8BF235BEF2FCA428E8043B2A8D1F0165</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>memory_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/memory_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8CC0420A33F829E826D353A5EC34F04C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshBackFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshBackFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8D31D862A8A256EDD7DFC2A3D6E4505A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>net_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/net_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8DD3E68F303090DE7D1792F806D38D9A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshAutoNormalFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Auto/MJRefreshAutoNormalFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8E34C2C41BB9A646C73B40CC13C3A3A5</key>
+		<dict>
+			<key>fileRef</key>
+			<string>37D9AD0D8EAB21969CBB74F5FF1BE38D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>9039CF62399C528E1BF9762EAD2E6D28</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>E1E94C133AD95B7DF17086C81AC0CE91</string>
+				<string>EA72DE9D8B425A429A8AB89A9408EE9A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>BaiduMapKit</string>
+			<key>path</key>
+			<string>BaiduMapKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>90B4D11D505F86542006276D26F555A3</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>669C7E88E884A4B26CA4585844C20FA4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MJRefresh/MJRefresh-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>90B796737970953800E7EF57D83A0B66</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVACL.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>91247678E3E2D23B0BF2C3EF48002167</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>78E642FD20DDC06D7DB26D73AD4B74C9</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9278550544296A135AD73F057D0C80F8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>0D82DC9B2E3B57C4421C10AEA49C6D75</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>9347B960A275D7EEF8F79F348578B45D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>45C74E7239C6B686A0D22493341FF067</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>93A4A3777CF96A4AAC1D13BA6DCCEA73</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>text.script.ruby</string>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>94BDFDFA4567D11ADBE332123689D3BD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CEFDC58C7241F86D92DEF8EDFCE7DF99</string>
+				<string>C0266DA702333927677C77CC3FCB8390</string>
+				<string>B7B6154D69B450647A1787A95ECAD0F2</string>
+				<string>A2F6E9757ACC5A5FFACE3FE77F525BBB</string>
+				<string>2427E2F0CA20B2924D366EA986934663</string>
+				<string>E7A8DDD289D3BFB8950D29CBF67C7132</string>
+				<string>F01687C8E9A3E4F8A528BE97DE7BDB80</string>
+				<string>5A18A32422C5C66F04A1803B4E06737A</string>
+				<string>1F48696AD698115D898EC7CCD60D075A</string>
+				<string>F52763D22F95CF0A6F8491822F37BF5D</string>
+				<string>4F367DCDFE766D2A4DB80B51A41AACA0</string>
+				<string>E954B9D3A283FB30A945CE8823E102DD</string>
+				<string>F3AC7C93C770A6F7918EA23972C1762A</string>
+				<string>499211EAF9B4ACA6D9DC215454184F4D</string>
+				<string>4548D482088C76C3191E06CDFD55A8E3</string>
+				<string>8A9118E83980D38CDCA9C5476CDBEC66</string>
+				<string>777A861D7A0ED7A46ED02C5611EDC9FD</string>
+				<string>6E9813A3A92FBA6F262C2C9EA2D60D14</string>
+				<string>467ADC9DF6A1E6193FE860E7DF3E8D07</string>
+				<string>44529459406814AB948DF5BFEEA0A227</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>95B1AA9D9F19C5CDBE27ED173489DD8A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>read_handle.c</string>
+			<key>path</key>
+			<string>libmosquitto/read_handle.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>95FFC498FF45A3855B4412BA73403E48</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>logging_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/logging_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9609D1D58132FFA5DF51DEFE904DE202</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshStateHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshStateHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>96621F7971C7781D59929EF6318C56B6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BEE1A359D5C155FF0E53F5EBB41A85F2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>991EAB5C59869BA64F3267595ABB54EA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIScrollView+MJRefresh.h</string>
+			<key>path</key>
+			<string>MJRefresh/UIScrollView+MJRefresh.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9AB0597B0CF276632468A594EFE0D898</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>memory_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/memory_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9B25F51E93BB9BC9D4B2B73DA599F444</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>BaiduMapAPI_Search.framework</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Search.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9CE10E71BD2B9B09385997DCA43CBC4B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>EC6ECCCCA2695DA1CCD56BFC28CC9154</string>
+				<string>C15C8F86361C3263D268D31F343A48BD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AVOSCloudCrashReporting</string>
+			<key>path</key>
+			<string>AVOSCloudCrashReporting</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9F39C0DE118394C0D7ED307D6382C7FC</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>A5EE3BE9830747621B1CC554FFCEE08A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>A21058485C06EABB5EB9F50FCE035BAF</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>BC1A2BE2EFF07EA12E33F426C8C66A09</string>
+				<string>9CE10E71BD2B9B09385997DCA43CBC4B</string>
+				<string>9039CF62399C528E1BF9762EAD2E6D28</string>
+				<string>4B264BE09217844AFFE9FDEBC915E8D2</string>
+				<string>0D64DF6225ECD6A7FF11CE8317F31CF5</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A253E0C185081AFD8E5FB710742CD42D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>MQTTKit</string>
+			<key>target</key>
+			<string>74CD2F578138157E0B27CCEE08C069EF</string>
+			<key>targetProxy</key>
+			<string>EC5E91D0C92704CC7F1F28D867F23864</string>
+		</dict>
+		<key>A2B70E98BF6FC8053DE7520D33CA8FBF</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>BaiduMapAPI_Radar.framework</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Radar.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A2F6E9757ACC5A5FFACE3FE77F525BBB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8065DE43F1237552918548F388A4B0B6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A38A72EB1E30B0D44A1637025F1EFC82</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVCloud.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A4CC53E1210BCDFAF2DBC9552392EA1E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVMessage.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5319E55E261BA98374C998F1A192FFD</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVRole.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A582D1C3F046A24976616AA9E1A6D98F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshGifHeader.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Header/MJRefreshGifHeader.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5EE3BE9830747621B1CC554FFCEE08A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElectrombileManager.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A7EE97EE15130A203D614DB4BB8F6408</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A82BB748CD97C5F0B8128EC4B54F5CB6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>326C616295AC2A9A2B232E1EFDB52777</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>AAF678CED40D3499169D10F63CA0719E</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_ANALYZER_NONNULL</key>
+				<string>YES</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES</string>
+				<key>CLANG_WARN_UNREACHABLE_CODE</key>
+				<string>YES</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>POD_CONFIGURATION_RELEASE=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>8.0</string>
+				<key>STRIP_INSTALLED_PRODUCT</key>
+				<string>NO</string>
+				<key>SYMROOT</key>
+				<string>${SRCROOT}/../build</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>AEADA9162308E48B2D89905EFB7AF26C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshConst.m</string>
+			<key>path</key>
+			<string>MJRefresh/MJRefreshConst.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AFD5E70FA17BA571A8CF642C5F0A3391</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVSession.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B10A64BAF7708212BEE77303B46759A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>FD4046C6522AD68C8B5C25811DBC5A49</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>B3423E759CA092D7F6577B2F94290967</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>config.h</string>
+			<key>path</key>
+			<string>libmosquitto/config.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B3B45F173B01442CDBDCE0B54A881ED4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>MQTTKit.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B4995BD9918A6C22BAC13A6D5B582FAA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MJRefresh-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>B7B6154D69B450647A1787A95ECAD0F2</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6FD2AEE7FDF67BB9EF5F377847F6403B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B7F19D2AB4831A7997383F601F3BA39F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshComponent.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshComponent.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BA4BB0AAC5D763942B85DD3856FCC790</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0B6F7F90F165D3687A2709ED93E025F4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BBF7DD88449BFD970DBDF318EEDF4888</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>send_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/send_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BC1A2BE2EFF07EA12E33F426C8C66A09</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>90B796737970953800E7EF57D83A0B66</string>
+				<string>02D7261839BF70DC62F6FCEEE14540E8</string>
+				<string>C570AD2EFBD786466FBD32FB54BF0B33</string>
+				<string>F0B5D5DB6D3E6D15672395EFD67D5849</string>
+				<string>A38A72EB1E30B0D44A1637025F1EFC82</string>
+				<string>55E0B9A2C059A009C39200E12574C6C6</string>
+				<string>A7EE97EE15130A203D614DB4BB8F6408</string>
+				<string>E6E9A33F161FBE7B16903E82DD6B6F5E</string>
+				<string>31A156193BC96B97A5F13CD02ED5EF2A</string>
+				<string>7A0B81EA175CA43758888349B66ECC18</string>
+				<string>3513733EF799131F18A3E5B7E7787F96</string>
+				<string>7EA27E09CF69EAC86C69C367A9D8FF1F</string>
+				<string>5F4366A57069E106068B6DB9B4043A1C</string>
+				<string>3215715425C58DF64B1D4653FCAF594C</string>
+				<string>1FBD97B6167C6E3E461F2D02F6DE9F31</string>
+				<string>A4CC53E1210BCDFAF2DBC9552392EA1E</string>
+				<string>5816222099D85A051EB9A5576681E50A</string>
+				<string>4D2DAB7EA803340781358D542B39EB9D</string>
+				<string>35F18AAF09777F272BB6429F479BA694</string>
+				<string>EF29B72FD9CBB862BB8BE425E7E6A084</string>
+				<string>D44F35A67D79C282AE498170CC2E9BB5</string>
+				<string>84069E71E708729A1D523F5D035A923C</string>
+				<string>A5319E55E261BA98374C998F1A192FFD</string>
+				<string>E36C64733B48D9DBA8931EC034D382A0</string>
+				<string>E4BD62CD6584343A4F8C01A4AD16EB1D</string>
+				<string>8522F31F4AA62E2F651C8A6E2091DEE6</string>
+				<string>AFD5E70FA17BA571A8CF642C5F0A3391</string>
+				<string>1B6E5460D7E4E603B9D80E82E2FFC376</string>
+				<string>BD794BF472183787546D6B7B38A562B2</string>
+				<string>5FC4FAFD104E4E19DC6BB6E5870F9FA3</string>
+				<string>71C7F9EE72E350D0578E49FA63B7147A</string>
+				<string>56E1EB97FA79D371672D6829BCEF9590</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>AVOSCloud</string>
+			<key>path</key>
+			<string>AVOSCloud</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>3DCAB2B7CDE207B3958B6CB957FCC758</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BD794BF472183787546D6B7B38A562B2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVStatus.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BD7BE2371CE6E9F347B90E878482C3B0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshBackGifFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BE3157ABD99BD3798EB9E55B95DC09BE</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>BaiduMapAPI_Cloud.framework</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Cloud.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BEE1A359D5C155FF0E53F5EBB41A85F2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>MJRefresh.bundle</string>
+			<key>path</key>
+			<string>MJRefresh/MJRefresh.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BF2F903B2423040CD1EE653A7EA71BEF</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4F1D08D758A8AA181320EE022D1895D5</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>BFFD8DB7A9A666265CA6F32D8F3B11DF</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>E18AFF24E93352E04326B85AFDA366DA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>C0266DA702333927677C77CC3FCB8390</key>
+		<dict>
+			<key>fileRef</key>
+			<string>CE80F79E5BC917373670151181B466D0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>C03C39BC12FFB26F7D6AC0243512DEC2</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-ElectrombileManager-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C10291D821E77E019EC760D33F1DAB2B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6A311D8E4F707F5B68B867CC0CA66D02</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C15C8F86361C3263D268D31F343A48BD</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>2A683DE00A50B2AD1532040E2610145D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C3D30FEBD6371EBAEB477F9160F0B2D4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C570AD2EFBD786466FBD32FB54BF0B33</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVAnonymousUtils.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>C6931B427F567C8B2FA563BC6F0B31D1</key>
+		<dict>
+			<key>fileRef</key>
+			<string>56B318D68B33B1CB64CEF9A622E55DFD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>C70624D2FCE51ACAEE1499BE2F2CB268</key>
+		<dict>
+			<key>fileRef</key>
+			<string>570BE6A8EEA1F6A3B32B2E8AEF313982</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>C730F1D923DE008EDF6C9B8FDB7E761E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIView+MJExtension.m</string>
+			<key>path</key>
+			<string>MJRefresh/UIView+MJExtension.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CE70903D30721393D18219789D9D1829</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7C93FCCC22DB0386E468E9488B12588E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>CE80F79E5BC917373670151181B466D0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>MJRefreshAutoFooter.m</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshAutoFooter.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>CEC22C73C1608DFA5D5D78BDCB218219</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>CEFDC58C7241F86D92DEF8EDFCE7DF99</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B4995BD9918A6C22BAC13A6D5B582FAA</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CF2B54BBC95C6F8B8C60D75E2DCC865A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B3423E759CA092D7F6577B2F94290967</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>D0FCD9B2B551CE674A47DDEDFE26FAD0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIScrollView+MJExtension.m</string>
+			<key>path</key>
+			<string>MJRefresh/UIScrollView+MJExtension.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D1BD6A309AD068D7157C9E1EB78662DC</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>net_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/net_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D29F8D57C0B719A185AB3867BB1D1C44</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>CF2B54BBC95C6F8B8C60D75E2DCC865A</string>
+				<string>49C79F1E6A28D8F1137F991B67E4FFC6</string>
+				<string>0CD59E4A07679254FCD5F69EDFCDC7B6</string>
+				<string>3AB6BCE6926858E6B5CE3A9568670B60</string>
+				<string>702A36A2FB387BED332E93FE561203CF</string>
+				<string>468C3B68DEF2C90B587786775E4B1AFA</string>
+				<string>5711B9C0974381FA41135A9460E7DF75</string>
+				<string>132010EF9B5680FF1CE24C01545D568C</string>
+				<string>45C257901E8F645FBF3015102728F0AC</string>
+				<string>12BE33D676B92DE06A2AE7B4A323E7C8</string>
+				<string>59F6E6FE2D22A9ACB59760DA962E319E</string>
+				<string>8E34C2C41BB9A646C73B40CC13C3A3A5</string>
+				<string>3FCBC8DED7E48831872465294DDB9B6E</string>
+				<string>C70624D2FCE51ACAEE1499BE2F2CB268</string>
+				<string>A82BB748CD97C5F0B8128EC4B54F5CB6</string>
+				<string>E4ED52BE75F1191E119E354A91E1CD29</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>D41D8CD98F00B204E9800998ECF8427E</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastSwiftUpdateCheck</key>
+				<string>0730</string>
+				<key>LastUpgradeCheck</key>
+				<string>0700</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>7DB346D0F39D3F0E887471402A8071AB</string>
+			<key>productRefGroup</key>
+			<string>315D23F3B0A45E26640DC41007CD5CE2</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>70BC44266C6FFE30D2C57129458E070B</string>
+				<string>74CD2F578138157E0B27CCEE08C069EF</string>
+				<string>80E52358F49EC68DC20811E50E469524</string>
+			</array>
+		</dict>
+		<key>D44F35A67D79C282AE498170CC2E9BB5</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVQuery.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D746CE859AC7B54165099775628DEC5E</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>B3B45F173B01442CDBDCE0B54A881ED4</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Target Support Files/MQTTKit/MQTTKit-prefix.pch</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>5.0</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PRIVATE_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string></string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D783DE229753BCAB430764D7F15520AA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>dummypthread.h</string>
+			<key>path</key>
+			<string>libmosquitto/dummypthread.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DA0CFDDE216EB50BC7F774F4DF8F5D9D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-ElectrombileManager-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DD87EE2AF18EF04BE68351F032B180A0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.plug-in</string>
+			<key>name</key>
+			<string>mapapi.bundle</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Map.framework/Resources/mapapi.bundle</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DD90519B83D4EDC272FA46904BA2D9F8</key>
+		<dict>
+			<key>fileRef</key>
+			<string>95B1AA9D9F19C5CDBE27ED173489DD8A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>E0A269EC604F5648620F6823A0827EEB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>mosquitto_internal.h</string>
+			<key>path</key>
+			<string>libmosquitto/mosquitto_internal.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E18AFF24E93352E04326B85AFDA366DA</key>
+		<dict>
+			<key>fileRef</key>
+			<string>35C0216630B14C9F8DD0F22A3E44B657</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E1E94C133AD95B7DF17086C81AC0CE91</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5475AD06E9F0D29653F2F9A470C28248</string>
+				<string>BE3157ABD99BD3798EB9E55B95DC09BE</string>
+				<string>ECB08A940A4072775FC0EE5478ED2B29</string>
+				<string>E676485E84BDC8D4E8280AE0416BFDC3</string>
+				<string>A2B70E98BF6FC8053DE7520D33CA8FBF</string>
+				<string>9B25F51E93BB9BC9D4B2B73DA599F444</string>
+				<string>38CF7D644821BC99A5A486C7B0B49AF3</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E36C64733B48D9DBA8931EC034D382A0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVSaveOption.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E4BD62CD6584343A4F8C01A4AD16EB1D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVSearchQuery.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E4ED52BE75F1191E119E354A91E1CD29</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F22C524A1FE040DE5C14E41B71F7D5E4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Project</string>
+				</array>
+			</dict>
+		</dict>
+		<key>E676485E84BDC8D4E8280AE0416BFDC3</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>BaiduMapAPI_Map.framework</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Map.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E6E9A33F161FBE7B16903E82DD6B6F5E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVFile.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E7A8DDD289D3BFB8950D29CBF67C7132</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1C96E3820EFCB4D182C5776566686B6E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E954B9D3A283FB30A945CE8823E102DD</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C3D30FEBD6371EBAEB477F9160F0B2D4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>E9D2CED04DDF0D48B7F2002A4D2CD518</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libMQTTKit.a</string>
+			<key>path</key>
+			<string>libMQTTKit.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>EA72DE9D8B425A429A8AB89A9408EE9A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DD87EE2AF18EF04BE68351F032B180A0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Resources</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EC5E91D0C92704CC7F1F28D867F23864</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>74CD2F578138157E0B27CCEE08C069EF</string>
+			<key>remoteInfo</key>
+			<string>MQTTKit</string>
+		</dict>
+		<key>EC6ECCCCA2695DA1CCD56BFC28CC9154</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVOSCloudCrashReporting.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>ECB08A940A4072775FC0EE5478ED2B29</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>BaiduMapAPI_Location.framework</string>
+			<key>path</key>
+			<string>BaiduMapKit/BaiduMapAPI_Location.framework</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EF29B72FD9CBB862BB8BE425E7E6A084</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVPush.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F01687C8E9A3E4F8A528BE97DE7BDB80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BD7BE2371CE6E9F347B90E878482C3B0</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F06CACBC453F6F5A8C41534BC169F5CA</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-ElectrombileManager.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F07282C44C6E921780365CD5A0A798A0</key>
+		<dict>
+			<key>fileRef</key>
+			<string>0ACB8F72DAA081A5019B9899127985C2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>F0B5D5DB6D3E6D15672395EFD67D5849</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AVAvailability.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F22C524A1FE040DE5C14E41B71F7D5E4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>will_mosq.h</string>
+			<key>path</key>
+			<string>libmosquitto/will_mosq.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F3AC7C93C770A6F7918EA23972C1762A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A582D1C3F046A24976616AA9E1A6D98F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F4647EC98AA905F286040E25060122F0</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>UIScrollView+MJRefresh.m</string>
+			<key>path</key>
+			<string>MJRefresh/UIScrollView+MJRefresh.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F52763D22F95CF0A6F8491822F37BF5D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B7F19D2AB4831A7997383F601F3BA39F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>F5EA198FFD6B21876A1A332E954447EA</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1CEF47FFA3C0D6F18D7C71BF697E24F0</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F813CE77ED47533F1C793314A503414F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshBackGifFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Custom/Footer/Back/MJRefreshBackGifFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F92D9215C6F6FAEB63F7FBF3ACEAAB8D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>675BBF57565A00762DC4D13D19EAEECD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>F97C9816000540709FF40C1BDA19D085</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>B3B45F173B01442CDBDCE0B54A881ED4</string>
+				<string>0B6F7F90F165D3687A2709ED93E025F4</string>
+				<string>0B27F0BB5B62E086F2BECD91F15907F8</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>path</key>
+			<string>../Target Support Files/MQTTKit</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F9A17E39DEF49FB1905B938B63E95AA8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshHeader.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshHeader.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FC257C7C2E81FFE7B228DEB698755BC6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>7ABF2524828D223F962D775863A8B7D6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>COMPILER_FLAGS</key>
+				<string>-DOS_OBJECT_USE_OBJC=0</string>
+			</dict>
+		</dict>
+		<key>FCE7E0DBA6BBF699FEFF99856C2AF4E6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>send_client_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/send_client_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FD4046C6522AD68C8B5C25811DBC5A49</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>UIView+MJExtension.h</string>
+			<key>path</key>
+			<string>MJRefresh/UIView+MJExtension.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FD45133E0EBFAA479F277CE9FD96004D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>MJRefreshFooter.h</string>
+			<key>path</key>
+			<string>MJRefresh/Base/MJRefreshFooter.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FE34CEA5EE8D523CD746616F03B2047E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>will_mosq.c</string>
+			<key>path</key>
+			<string>libmosquitto/will_mosq.c</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF3CFDC271EDCFACE96BE9799A65BBC8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>mqtt3_protocol.h</string>
+			<key>path</key>
+			<string>libmosquitto/mqtt3_protocol.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF48861ACB7CFA05FC1645B744D3778C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>archive.ar</string>
+			<key>path</key>
+			<string>libAVOSCloud.a</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF885BE8F853DE3581C1DE3D55A9B6C1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MJRefresh-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>D41D8CD98F00B204E9800998ECF8427E</string>
+</dict>
+</plist>

@@ -2,21 +2,24 @@ PODS:
   - AVOSCloud (3.3.5)
   - AVOSCloudCrashReporting (3.3.5):
     - AVOSCloud
-  - MJRefresh (3.1.9)
+  - BaiduMapKit (3.0.0)
+  - MJRefresh (3.1.10)
   - MQTTKit (0.1.0)
 
 DEPENDENCIES:
   - AVOSCloud
   - AVOSCloudCrashReporting
+  - BaiduMapKit
   - MJRefresh
   - MQTTKit
 
 SPEC CHECKSUMS:
   AVOSCloud: 1fe170768bee7e05bc3ea86e38d5bddb105cb957
   AVOSCloudCrashReporting: 7ad087db785a25d6ef03cb54c2c0b460eb32dabb
-  MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
+  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
+  MJRefresh: bb72948c985914b0b5cecac573a2c69a8915fb02
   MQTTKit: a4e6b8aa92db1aeae917d2b773fd72a7749937c4
 
-PODFILE CHECKSUM: 18fcf47eeccd979fd8ab8d4155b7ab7e9315ce0c
+PODFILE CHECKSUM: 4bed72ed1d536e156708ed181edb05e2d22a26b0
 
 COCOAPODS: 1.0.0
